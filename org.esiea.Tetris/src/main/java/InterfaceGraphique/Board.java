@@ -4,12 +4,16 @@ import java.awt.Graphics;
 
 import javax.swing.JComponent;
 
+import GestionFichier.Pieces;
+
 public class Board extends JComponent {
 	  private int pas_vertical;
 	  private int pas_horizontal;
 	  private int width_rect;
 	  private int height_rect;
-	  private int[][] Board;
+	  public int[][] Board;
+	  
+
 	  
 	  public void paint(Graphics g) {
 		  	// Initialisation des variables.
@@ -18,6 +22,24 @@ public class Board extends JComponent {
 		  	width_rect=20;
 		  	height_rect=20;
 		  	Board= new int[Fenetre.NUM_LIGNE_TETRIS][Fenetre.NUM_COL_TETRIS];
+		  	
+		  	// EXEMPLE DE PIECE
+		  	Board[1][3]=0;
+		  	Board[1][4]=5;
+		  	Board[1][5]=0;
+		  	Board[1][6]=0;
+		  	Board[2][3]=0;
+		  	Board[2][4]=5;
+		  	Board[2][5]=5;
+		  	Board[2][6]=0;
+		  	Board[3][3]=0;
+		  	Board[3][4]=5;
+		  	Board[3][5]=0;
+		  	Board[3][6]=0;
+		  	Board[4][3]=0;
+		  	Board[4][4]=0;
+		  	Board[4][5]=0;
+		  	Board[4][6]=0;
 		  	
 		 // Dessine le plateau
 		  	for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++) {

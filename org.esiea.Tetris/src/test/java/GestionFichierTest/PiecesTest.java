@@ -17,10 +17,11 @@ public class PiecesTest {
 		pieces= new Pieces();
 	}
 	
-	// Test pour vérifier que la classe exsiste
+	// Test pour vérifier l'exactitude de la piece 5
 	@Test
-	public void shouldReturnNotNull() {
-		Assert.assertNotNull(pieces);
+	public void shouldReturnPiece5() {
+		int [][] Piece5={ {0,5,0,0,0,5,5,0,0,5,0,0,0,0,0,0},{0,0,0,0,0,0,5,0,0,5,5,5,0,0,0,0},{0,0,0,5,0,0,5,5,0,0,0,5,0,0,0,0},{0,5,5,5,0,0,5,0,0,0,0,0,0,0,0,0} };
+		assertEquals(pieces.getPiece5(),Piece5);
 	}
 
 
