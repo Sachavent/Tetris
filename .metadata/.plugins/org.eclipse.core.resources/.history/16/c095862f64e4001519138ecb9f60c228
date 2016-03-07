@@ -1,0 +1,19 @@
+package org.esiea.Tetris;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import junit.framework.*;
+
+public class TotoTest extends TestCase {
+	
+	@Before
+	Toto toto= new Toto();
+	
+	@Test
+	public final void shouldReturnNotNullTest(){		
+		
+	}
+
+
+}
