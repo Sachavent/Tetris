@@ -1,7 +1,0 @@
-package org.esiea.Tetris;
-
-import junit.*;
-
-public class HelloWorldTest extends TestCase {
-
-}

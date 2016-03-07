@@ -1,6 +1,7 @@
 package InterfaceGraphique;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Frame;
 
 import javax.swing.JFrame;
@@ -11,23 +12,16 @@ import javax.swing.JTable;
 public class Fenetre {
 	
 	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
-	public static int num_col_tetris=20;
-	public static int num_ligne_tetris=20;
+	public static int NUM_COL_TETRIS=20;
+	public static int NUM_LIGNE_TETRIS=20;
 	
 	public void creationfenetre() {
+		
 		//Création fenetre
 		JFrame fenetre = new JFrame();
-		// On crée le Jpanel
-		JPanel panel= new JPanel();
-		// Création de la Jtable (qui permettra d'afficher le Tetris)
-		JTable table = new JTable(new TetrisBoard());
-		table.setCellSelectionEnabled(false);
-
-		JScrollPane tableContainer = new JScrollPane(table);
-		//On ajoute la table au panel
-		panel.add(tableContainer);
-		// On ajoute le panel à la fenetre
-	    fenetre.getContentPane().add(panel);
+		
+		// On crée un nouveau Board
+	    fenetre.getContentPane().add(new Board());
 	    
 	    //Affiche la fenetre
 	    fenetre.setSize(800,500);
