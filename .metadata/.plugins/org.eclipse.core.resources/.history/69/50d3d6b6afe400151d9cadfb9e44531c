@@ -1,0 +1,14 @@
+package GestionFichierTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PiecesTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

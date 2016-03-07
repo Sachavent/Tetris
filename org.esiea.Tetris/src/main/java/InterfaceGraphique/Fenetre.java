@@ -12,7 +12,7 @@ import javax.swing.JTable;
 public class Fenetre {
 	
 	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
-	public static int NUM_COL_TETRIS=20;
+	public static int NUM_COL_TETRIS=10;
 	public static int NUM_LIGNE_TETRIS=20;
 	
 	public void creationfenetre() {
@@ -24,7 +24,7 @@ public class Fenetre {
 	    fenetre.getContentPane().add(new Board());
 	    
 	    //Affiche la fenetre
-	    fenetre.setSize(800,500);
+	    fenetre.setSize(400,500);
 		fenetre.setVisible(true);
 	
 		

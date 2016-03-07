@@ -1,0 +1,24 @@
+package InterfaceGraphiqueTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import InterfaceGraphique.Fenetre;
+
+public class FenetreTest {
+
+	@Before
+	Fenetre fenetre= new Fenetre();
+	
+	// Test pour vérifier que la fenetre existe
+	@Test
+	public void shouldReturnNotNull() {
+		Assert.assertNotNull(fenetre);
+	}
+
+	
+	
+}

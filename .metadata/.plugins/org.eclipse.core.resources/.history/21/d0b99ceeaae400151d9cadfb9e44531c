@@ -1,0 +1,5 @@
+package InterfaceClavier;
+
+public class KeyPressed {
+
+}
