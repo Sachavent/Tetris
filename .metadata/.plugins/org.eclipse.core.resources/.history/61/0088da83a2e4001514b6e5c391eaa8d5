@@ -1,0 +1,35 @@
+package InterfaceGraphique;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class Fenetre {
+	
+	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
+	public static int NUM_COL_TETRIS=20;
+	public static int NUM_LIGNE_TETRIS=20;
+	
+	public void creationfenetre() {
+		
+		//Création fenetre
+		JFrame fenetre = new JFrame();
+		
+		// On ajoute le panel à la fenetre
+	    fenetre.getContentPane().add(new Board());
+	    
+	    //Affiche la fenetre
+	    fenetre.setSize(800,500);
+		fenetre.setVisible(true);
+	
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,46 @@
+package InterfaceGraphique;
+
+import java.awt.Graphics;
+
+import javax.swing.JComponent;
+
+public class Board extends JComponent {
+  	int pas_vertical=0;
+  	int pas_horizontal=0;
+  	int width_rect=20;
+  	int height_rect=20;
+	  public void paint(Graphics g) {
+		  	// Dessine le plateau
+
+		  
+		  	for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++) {
+		  		pas_vertical+=height_rect;
+		  		pas_horizontal=0;
+		  		for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+		  			System.out.println("test");
+		  			g.drawRect ((40+pas_horizontal), (30+pas_vertical), width_rect, height_rect);
+		  			pas_horizontal+=width_rect;
+		  		}
+		  	}
+
+		    g.fillRect(40+(width_rect*3), 30+(height_rect*3), width_rect, height_rect);
+		    avancetour(g);
+		     
+	  }
+	  
+	  public void avancetour(Graphics g) {
+		  	for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++) {
+		  		pas_vertical+=height_rect;
+		  		pas_horizontal=0;
+		  		for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+		  			System.out.println("test");
+		  			g.drawRect ((40+pas_horizontal), (30+pas_vertical), width_rect, height_rect);
+		  			pas_horizontal+=width_rect;
+		  		}
+		  	}
+		  g.drawRect(40+(width_rect*3), 30+(height_rect*3), width_rect, height_rect);
+		  g.fillRect(40+(width_rect*3), 30+(height_rect*4), width_rect, height_rect);
+		  repaint();
+	  }
+
+}

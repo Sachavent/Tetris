@@ -1,0 +1,47 @@
+package InterfaceGraphique;
+
+import java.awt.BorderLayout;
+import java.awt.Frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
+
+public class Fenetre {
+	
+	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
+	public static int num_col_tetris=20;
+	public static int num_ligne_tetris=20;
+	
+	public void creationfenetre() {
+		
+		//Création fenetre
+		JFrame fenetre = new JFrame();
+		// On crée le Jpanel
+		JPanel panel= new JPanel();
+		// Création de la Jtable (qui permettra d'afficher le Tetris)
+		JTable table = new JTable(new TetrisBoard());
+		table.setCellSelectionEnabled(false);
+		
+		 table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		    table.setColumnSelectionAllowed(true);
+		    table.setRowSelectionAllowed(true);
+
+		JScrollPane tableContainer = new JScrollPane(table);
+		//On ajoute la table au panel
+		panel.add(tableContainer);
+		// On ajoute le panel à la fenetre
+	    fenetre.getContentPane().add(panel);
+	    
+	    //Affiche la fenetre
+	    fenetre.setSize(800,500);
+		fenetre.setVisible(true);
+	
+		
+	}
+	
+	
+	
+}

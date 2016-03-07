@@ -1,0 +1,8 @@
+package org.esiea.Tetris;
+
+public class Toto {
+	public static String titi() {
+		return "coucou";
+	}
+}
+

@@ -1,0 +1,12 @@
+package org.esiea.Tetris;
+
+import junit.framework.Assert;
+
+public class HelloWorld {
+	public static void main (String[] args) {
+		System.out.println("Hellow");
+		
+		Toto toto= new Toto();
+		System.out.println(toto.titi());
+	}
+}

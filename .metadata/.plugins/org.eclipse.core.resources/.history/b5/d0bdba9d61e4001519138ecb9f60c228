@@ -1,0 +1,5 @@
+package org.esiea.Tetris;
+
+public class Toto {
+	return 1;
+}

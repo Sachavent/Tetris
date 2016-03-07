@@ -1,0 +1,12 @@
+package org.esiea.Tetris;
+
+import junit.framework.TestCase;
+
+public class HelloWorldTest extends TestCase {
+	@Test
+	public final void shouldReturnNotNull() {
+		Toto toto= new Toto();
+		Assert.assertNotNull(toto);
+	}
+
+}

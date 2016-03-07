@@ -1,0 +1,27 @@
+package InterfaceGraphique;
+
+import javax.swing.table.AbstractTableModel;
+
+
+public class TetrisBoard extends AbstractTableModel{
+	
+	// Le nombre de null correspond au nombre de colonnes du Tetris
+	private Object[] columnNames= {null, null, null, null, null,null, null, null, null, null,null, null, null, null, null,null, null, null, null, null};
+	
+	public int getColumnCount() {
+		return Fenetre.NUM_COL_TETRIS;
+	}
+
+	public int getRowCount() {
+		return Fenetre.NUM_LIGNE_TETRIS;
+	}
+
+	public Object getValueAt(int rowIndex, int columnIndex) {
+		return null;
+	}
+	public String getColumnName(int column) {
+	    return (String) columnNames[column];
+	}
+	
+
+}
