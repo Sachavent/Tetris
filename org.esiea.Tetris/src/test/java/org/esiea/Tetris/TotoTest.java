@@ -2,6 +2,8 @@ package org.esiea.Tetris;
 
 import org.junit.*;
 
+import Launcher.Toto;
+
 public class TotoTest {
 
 		@Test
