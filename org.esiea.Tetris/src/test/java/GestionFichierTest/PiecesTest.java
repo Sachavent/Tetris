@@ -17,11 +17,12 @@ public class PiecesTest {
 		pieces= new Pieces();
 	}
 	
-	// Test pour vérifier l'exactitude de la piece 5
+	// Test pour vérifier l'exactitude de la piece 1
 	@Test
-	public void shouldReturnPiece5() {
-		int [][] Piece5={ {0,5,0,0,0,5,5,0,0,5,0,0,0,0,0,0},{0,0,0,0,0,0,5,0,0,5,5,5,0,0,0,0},{0,0,0,5,0,0,5,5,0,0,0,5,0,0,0,0},{0,5,5,5,0,0,5,0,0,0,0,0,0,0,0,0} };
-		assertEquals(pieces.getPiece5(),Piece5);
+	public void shouldReturnPieceChoose() {
+		int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+		assertEquals(Piece1,pieces.get_piece(1));
+		
 	}
 
 

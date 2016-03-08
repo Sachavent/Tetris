@@ -1,0 +1,23 @@
+package Launcher;
+
+
+import java.util.Scanner;
+
+import DeroulementJeu.Deroulement;
+import InterfaceGraphique.Fenetre;
+import junit.framework.Assert;
+
+public class Launcher {
+	
+	public static void main (String[] args) {
+		System.out.println("Lancement du Tetris");
+		
+		// Lance le jeu
+		Deroulement deroulement = new Deroulement();
+		
+		// Initialisation du plateau de jeu
+		deroulement.initialise();
+		//deroulement.run();
+		
+	}
+}

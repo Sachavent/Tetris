@@ -1,0 +1,22 @@
+package GestionFichier;
+
+public class Pieces {
+	// Création des pieces, codé sur des cases 4x4
+	// Chaque piece possède déjà les "valeurs" de sa rotation donc pas besoin de gérer les rotations de façon manuelle
+	public final static int NOMBRE_PIECE=1;
+	
+	int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+	
+	
+	public void setPiece1() {
+		for (int j=0; j < 16; j++) {
+		System.out.print( Piece1[0][j]);
+		}
+	}
+	
+	public void load_piece (int numberpiece){
+		
+		setPiece1();
+	}
+	
+}

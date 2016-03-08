@@ -1,0 +1,41 @@
+package GestionFichier;
+
+import DeroulementJeu.Deroulement;
+
+public class Pieces {
+	// Création des pieces, codé sur des cases 4x4
+	// Chaque piece possède déjà les "valeurs" de sa rotation donc pas besoin de gérer les rotations de façon manuelle
+	public final static int NOMBRE_PIECE=1;
+	
+	int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+	
+	public void setPiece1() {
+		
+	}
+	
+	
+	
+	public int[][] get_piece (int numberpiece){
+		switch (numberpiece) {
+		case 1:
+			return Piece1;
+			
+		default: return Piece1;
+		}
+		
+	}
+	
+	
+	
+	public void set_piece(int numberpiece) {
+		switch (numberpiece) {
+		case 1:
+			setPiece1();
+			break;
+			
+		
+		}
+		
+	}
+	
+}

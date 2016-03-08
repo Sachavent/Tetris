@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+import DeroulementJeu.Deroulement;
+
 public class Fenetre {
 	
 	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
@@ -21,7 +23,8 @@ public class Fenetre {
 		JFrame fenetre = new JFrame();
 		
 		// On crée un nouveau Board
-	    fenetre.getContentPane().add(new Board());
+		// Affiche le tableau pour les test
+	    fenetre.getContentPane().add(new RenderBoard());
 	    
 	    //Affiche la fenetre
 	    fenetre.setSize(400,500);

@@ -1,0 +1,21 @@
+package GestionFichier;
+
+public class Pieces {
+	
+	// Fermer de créer la piece et la récupérer
+	public int[][] getPiece1() {
+	int[][] Piece1 = { {0,5,0,0,0,5,5,0,0,5,0,0,0,0,0,0},{0,0,0,0,0,0,5,0,0,5,5,5,0,0,0,0},{0,0,0,5,0,0,5,5,0,0,0,5,0,0,0,0},{0,5,5,5,0,0,5,0,0,0,0,0,0,0,0,0} };
+	return Piece1;
+	}
+	
+	public void affiche_piece (){
+		int[][] Piece1 = { {0,5,0,0,0,5,5,0,0,5,0,0,0,0,0,0},{0,0,0,0,0,0,5,0,0,5,5,5,0,0,0,0},{0,0,0,5,0,0,5,5,0,0,0,5,0,0,0,0},{0,5,5,5,0,0,5,0,0,0,0,0,0,0,0,0} };
+		for (int j=0; j < 16; j++) {
+		System.out.print( Piece1[0][j]);
+		}
+	}
+	
+	public static void loadPiece() {
+		
+	}
+}
