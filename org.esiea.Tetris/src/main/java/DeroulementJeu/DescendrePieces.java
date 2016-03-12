@@ -1,10 +1,13 @@
 package DeroulementJeu;
 
+import GestionFichier.Pieces;
 import InterfaceGraphique.Fenetre;
 import Launcher.Launcher;
 
 public class DescendrePieces {
-
+	private static boolean flag_onemorezero=false;
+	public static boolean create_new_piece;
+	// Valeur qui indique de combien de ligne max on peut augmenter sans quitter le plateau
 	public static void launch() {
 		while (Launcher.finit==false) {
 		try {
@@ -13,19 +16,30 @@ public class DescendrePieces {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-		// On crée un tableau temporaire pour eviter de supprimer des bouts de piece 
-		int [][] temp = new int [Fenetre.NUM_LIGNE_TETRIS][Fenetre.NUM_COL_TETRIS];
 		
-		for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++) {
-			for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
-				// test important pour éviter les erreurs mémoires
-				if (i>0) {
-				temp[i][j]=Deroulement.Board[i-1][j];
-				}
-				
+		System.out.println("position ligne: "+ Pieces.position_piececourante[0]);
+		// On regarde si  la piece sort du plateau quand elle avance
+		// Si oui, alors on l'intègre au board et on crée une nouvelle piece
+		if (Pieces.position_piececourante[0]+5 > Fenetre.NUM_LIGNE_TETRIS ) {
+		  	int compteur=0;		
+			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+					if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						Deroulement.Board[i][j]=Deroulement.piece_courante[Pieces.rotation_piececourante][compteur];
+					}
+					}
+					compteur++;
+					}
 			}
-		}
-		Deroulement.setBoard(temp);
+			// Flag pour indiquer qu'il faut créer une nouvelle piece
+			create_new_piece=true;
+			// On incrémente la position s'il n'y a pas de problème...
+		} else {Pieces.position_piececourante[0]+=1;	 }
+
+				
+				
+
 	}
 	}
 }

@@ -3,6 +3,10 @@ package InteractionClavier;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import DeroulementJeu.Deroulement;
+import GestionFichier.Pieces;
+import InterfaceGraphique.Fenetre;
+
 
 // Classe gérant tous les inputs claviers
 // Est appelé dans la classe Fenetre
@@ -20,13 +24,15 @@ public class GestionClavier implements KeyListener{
 		// Quand on appuie sur la touche gauche
 		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
 			// On souhaite un déplacement de la piece vers la gauche
-			System.out.println("Touche appuyée: GAUCHE");	
+			Pieces.position_piececourante[1]--;
+			
 		}
 		
 		//Quand on appuie sur la fleche droite
 		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
-			// On souhaite deplacer la piece vers la droite
-			System.out.println("Touche appuyée: DROITE");
+			// On souhaite un déplacement vers la droite
+			Pieces.position_piececourante[1]++;
+
 		}
 	}
 

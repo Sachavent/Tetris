@@ -17,7 +17,8 @@ public class Deroulement {
 	private Fenetre fenetre;
 	private Pieces piece_tetris;
 	private int choose_random_piece;
-	private int[][] piece;
+	public static int[][] piece_courante;
+	
 
 		// Fonction qui sert à initialiser le jeu
 		public void initialise() {
@@ -31,14 +32,24 @@ public class Deroulement {
 			fenetre.creationfenetre();		
 			
 			
-			////////////////////////////////////////////// Lance le premier tour du jeu ////
+			////////////////////////////////////////////// Lance le premier tour du jeu //////////////////////
 			// Charge une premiere piece
 			piece_tetris= new Pieces();
 			
 			// On choisit un nombre aléatoire parmi les pieces existantes afin de choisir le numero de la piece a créer
 			int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
-			piece_tetris.create_piece(choose_random_piece);
+			piece_courante = piece_tetris.create_piece(choose_random_piece);
+			/*for (int i=0; i < 20; i++) {
+				for (int j=0; j < 20; j++) {
+					
+					Deroulement.Board[i][j]=0;
+					
+					}
 			
+			}*/
+			
+			
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			// On crée un thread pour la descente des pieces car elle se fait en parallèle du jeu
 			final DescendrePieces descendre= new DescendrePieces();
@@ -58,8 +69,18 @@ public class Deroulement {
 		//////////////////////////////////////////////////////////////
 		// Fonction qui sera réactualisé au cours du temps
 		public void run() {
-			
-			
+			// Flag provenant de descendre piece
+			if (DescendrePieces.create_new_piece==true){
+				// On réinitialise la position pour la nouvelle piece
+				Pieces.position_piececourante[0]=0;
+				Pieces.position_piececourante[0]=3;
+				
+				// On recrée une nouvelle piece
+				int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
+				piece_courante = piece_tetris.create_piece(choose_random_piece);
+				// On remet le flag à false
+				DescendrePieces.create_new_piece=false; 
+			}
 		
 
 		}

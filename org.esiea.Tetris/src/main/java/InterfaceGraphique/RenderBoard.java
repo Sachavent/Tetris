@@ -16,7 +16,6 @@ public class RenderBoard extends JComponent {
 	  private int width_rect;
 	  private int height_rect;
 	  public int[][] plateau;
-	  
 
 	  
 	  public void paint(Graphics g) {
@@ -26,6 +25,19 @@ public class RenderBoard extends JComponent {
 		  	width_rect=20;
 		  	height_rect=20;
 		  	plateau= Deroulement.getBoard();
+		  	
+		 // Dessine piece courante
+		  	int compteur=0;		
+			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+					if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						fill_case(g,i,j,width_rect, height_rect);
+					}
+					}
+					compteur++;
+					}
+			}
 
 		  	
 		 // Dessine le plateau

@@ -8,25 +8,26 @@ import DeroulementJeu.Deroulement;
 public class Pieces {
 	// Constante correspondant au nombre de piece, utile pour générer un random
 	public final static int NOMBRE_PIECE=2;
-	
+	public static int[] position_piececourante= {0,3};
+	public static int rotation_piececourante=0;
 	// Création des pieces, codé sur des cases 4x4
 	// Chaque piece possède déjà les "valeurs" de sa rotation donc pas besoin de gérer les rotations de façon manuelle
 	int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
 	int[][] Piece2 = { {0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0},{0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0} };
 	
 	// Fonction appelé dans la classe Deroulement afin de créer une nouvelle piece
-	public void create_piece(int numberpiece) {
+	public int[][] create_piece(int numberpiece) {
+
 		switch (numberpiece) {
 		case 1:
-			setPiece1();
-			return;
+			return Piece1;
 		case 2:
-			setPiece2();
-			return;
+			return Piece2;
+		default: return null;
 		}
 	}
 	
-	
+	/*
 	// Fonction qui change les valeurs du board afin de créer la piece 2
 	public void setPiece2() {
 		
@@ -55,7 +56,7 @@ public class Pieces {
 		
 	}
 		
-	}
+	}*/
 	
 	
 	// Get avec le numéro de la piece qu'on souhaite afficher
@@ -63,8 +64,9 @@ public class Pieces {
 		switch (numberpiece) {
 		case 1:
 			return Piece1;
-			
-		default: return Piece1;
+		case 2:
+			return Piece2;
+		default: return null;
 		}
 		
 	}
