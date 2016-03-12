@@ -1,5 +1,6 @@
 package InterfaceGraphique;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JComponent;
@@ -26,6 +27,12 @@ public class RenderBoard extends JComponent {
 		  	height_rect=20;
 		  	plateau= Deroulement.getBoard();
 		  	
+		  	//UTILE POUR LES TESTS
+		  	g.setColor(new Color(0,192,0)); 
+		  	fill_case(g,Pieces.position_piececourante[0],Pieces.position_piececourante[1]+3,width_rect, height_rect);
+		  	g.setColor(Color.pink);  
+		  	fill_case(g,Pieces.position_piececourante[0],Pieces.position_piececourante[1],width_rect, height_rect);
+		  	 g.setColor(new Color(0,128,224));
 		 // Dessine piece courante
 		  	int compteur=0;		
 			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {

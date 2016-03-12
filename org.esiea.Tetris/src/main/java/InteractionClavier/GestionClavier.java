@@ -31,8 +31,23 @@ public class GestionClavier implements KeyListener{
 		//Quand on appuie sur la fleche droite
 		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
 			// On souhaite un déplacement vers la droite
-			Pieces.position_piececourante[1]++;
-
+		  	int compteur=0;
+		  	int max=0;
+			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]+1; j < Pieces.position_piececourante[1]+5; j++) {
+					if (compteur < 16) {
+						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur%4>max) {
+							max=compteur%4;
+						}
+					}
+					compteur++;
+					
+					}
+			}
+			
+			if (Pieces.position_piececourante[1]+max+1 < Fenetre.NUM_COL_TETRIS) {
+				Pieces.position_piececourante[1]++;
+			}
 		}
 	}
 

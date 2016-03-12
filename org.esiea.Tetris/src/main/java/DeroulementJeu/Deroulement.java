@@ -73,7 +73,7 @@ public class Deroulement {
 			if (DescendrePieces.create_new_piece==true){
 				// On réinitialise la position pour la nouvelle piece
 				Pieces.position_piececourante[0]=0;
-				Pieces.position_piececourante[0]=3;
+				Pieces.position_piececourante[1]=3;
 				
 				// On recrée une nouvelle piece
 				int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);

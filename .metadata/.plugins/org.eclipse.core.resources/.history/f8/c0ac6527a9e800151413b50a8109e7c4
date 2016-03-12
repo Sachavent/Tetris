@@ -1,0 +1,62 @@
+package InteractionClavier;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import DeroulementJeu.Deroulement;
+import GestionFichier.Pieces;
+import InterfaceGraphique.Fenetre;
+
+
+// Classe gérant tous les inputs claviers
+// Est appelé dans la classe Fenetre
+public class GestionClavier implements KeyListener{
+
+	// S'execute quand on appuie sur une touche
+	public void keyPressed(KeyEvent e) {
+		
+		// Quand on appuie sur la touche du haut
+		if (e.getKeyCode()== KeyEvent.VK_UP) {
+			// On souhaite faire tourner les pieces
+		System.out.println("Touche appuyée: HAUT");
+		}
+		
+		// Quand on appuie sur la touche gauche
+		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
+			// On souhaite un déplacement de la piece vers la gauche
+			Pieces.position_piececourante[1]--;
+			
+		}
+		
+		//Quand on appuie sur la fleche droite
+		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
+			// On souhaite un déplacement vers la droite
+		  	int compteur=5;
+		  	System.out.println("modulo: "+ compteur%4);
+			/*for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]+1; j < Pieces.position_piececourante[1]+5; j++) {
+					if (Pieces.position_piececourante[1]+1 < Fenetre.NUM_COL_TETRIS) {
+					if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						
+					}
+					}
+					compteur++;
+					}
+					}
+			}*/
+
+		}
+	}
+
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

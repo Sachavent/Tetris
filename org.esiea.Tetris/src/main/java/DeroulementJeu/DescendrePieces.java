@@ -17,7 +17,7 @@ public class DescendrePieces {
 			e.printStackTrace();
 		} 
 		
-		System.out.println("position ligne: "+ Pieces.position_piececourante[0]);
+		System.out.println("Position ligne actuelle: "+Pieces.position_piececourante[0]);
 		// On regarde si  la piece sort du plateau quand elle avance
 		// Si oui, alors on l'intègre au board et on crée une nouvelle piece
 		if (Pieces.position_piececourante[0]+5 > Fenetre.NUM_LIGNE_TETRIS ) {
