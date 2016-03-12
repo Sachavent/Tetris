@@ -1,0 +1,8 @@
+package InterfaceReseau;
+
+
+public class Client {
+
+   public static void lancement() {}
+}
+
