@@ -15,4 +15,8 @@
 <fullyQualifiedTypeName name="InterfaceGraphique.Board"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="DeroulementJeu.Deroulement"/>
+<fullyQualifiedTypeName name="InterfaceReseau.Joueur1"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="InterfaceReseau.Joueur2"/>
+<fullyQualifiedTypeName name="java.net.ConnectException"/>
 </qualifiedTypeNameHistroy>

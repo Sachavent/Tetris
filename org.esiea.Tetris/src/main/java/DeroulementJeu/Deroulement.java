@@ -1,8 +1,11 @@
 package DeroulementJeu;
 
+import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.Random;
 
 import GestionFichier.Pieces;
+import InteractionClavier.GestionClavier;
 import InterfaceGraphique.Fenetre;
 import InterfaceGraphique.RenderBoard;
 
@@ -25,47 +28,39 @@ public class Deroulement {
 			
 			// Permet d'initialiser l'interface graphique
 			fenetre= new Fenetre();
-			fenetre.creationfenetre();	
+			fenetre.creationfenetre();		
 			
+			
+			////////////////////////////////////////////// Lance le premier tour du jeu ////
 			// Charge une premiere piece
 			piece_tetris= new Pieces();
 			
 			// On choisit un nombre aléatoire parmi les pieces existantes afin de choisir le numero de la piece a créer
 			int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
 			piece_tetris.create_piece(choose_random_piece);
+			
+			
+			// On crée un thread pour la descente des pieces car elle se fait en parallèle du jeu
+			final DescendrePieces descendre= new DescendrePieces();
+			Runnable descente= new Runnable () {
+				public void run() {
+							descendre.launch();
+				}
+			};
+			
+			// On lance le thread pour la descente des pieces
+			 
+			Thread t_descente = new Thread (descente);
+			 t_descente.start();
 		}  
 		
 		
 		//////////////////////////////////////////////////////////////
 		// Fonction qui sera réactualisé au cours du temps
 		public void run() {
-			// Attente de 1 s avant de refresh
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
 			
 			
-			descendrepiece();
-			
-		}
 		
-		public static void descendrepiece() {
-			// On crée un tableau temporaire pour eviter de supprimer des bouts de piece
-			int [][] temp = new int [Fenetre.NUM_LIGNE_TETRIS][Fenetre.NUM_COL_TETRIS];
-			
-			for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++) {
-				for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
-					// test important pour éviter les erreurs mémoires
-					if (i>0) {
-					temp[i][j]=Board[i-1][j];
-					}
-					
-				}
-			}
-			Board=temp;
 
 		}
 		
@@ -78,9 +73,14 @@ public class Deroulement {
 		}
 				
 		// Fonction qui retourne le tableau (important pour l'intéraction avec la classe interface graphique)
+		// On envoie le tableau au package interface graphique afin que celui ci soit afficher
 		public static int [][] getBoard() {
 			return Board;
 		}
-
+		
+		// Permet de modifier le plateau de jeu d'autres classe (utile pour la classe Descendre Piece)
+		public static void setBoard(int [][] plateau) {
+			Board=plateau;
+		}
 		
 }

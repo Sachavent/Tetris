@@ -1,0 +1,39 @@
+package InteractionClavier;
+
+import static org.junit.Assert.*;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+
+import org.junit.Before;
+import org.junit.Test;
+
+import GestionFichier.Pieces;
+import junit.framework.Assert;
+
+// MODIFIER CE TEST!!
+
+public class InputTest {
+	GestionClavier input;
+	Robot robot;
+	@Before
+	public void initialisation() throws AWTException {
+	input =new GestionClavier();
+	robot= new Robot();
+	}
+	
+	@Test
+	public void shouldReturnInputNotNull(){
+		robot.keyPress(KeyEvent.VK_LEFT);
+		addKeyListener(new GestionClavier());
+		if (input.getKeyCode()== KeyEvent.VK_LEFT) {
+		System.out.println("ca marche ou quoi");
+		}
+		//AssertTrue(input.keyPressed(KeyEvent.VK_A));
+		
+		
+	}
+
+}

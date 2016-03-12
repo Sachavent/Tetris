@@ -1,0 +1,20 @@
+package InteractionClavier;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class InputTest {
+	
+	@Before
+	public void initialisation() {
+	GestionClavier input=new GestionClavier();
+	}
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

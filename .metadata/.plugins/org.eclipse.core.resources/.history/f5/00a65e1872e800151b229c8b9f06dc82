@@ -1,0 +1,24 @@
+package InteractionClavier;
+
+import static org.junit.Assert.*;
+
+import java.awt.event.KeyEvent;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class InputTest {
+	GestionClavier input;
+	@Before
+	public void initialisation() {
+	input =new GestionClavier();
+	}
+	
+	@Test
+	public void shouldReturnInputNotNull() {
+		
+		KeyEvent key = new KeyEvent(input, KeyEvent.KEY_PRESSED, System.currentTimeMillis(), 0,  KeyEvent.VK_UP,'Z');
+	    instance.getKeyListeners()[0].keyPressed(key);
+	}
+
+}

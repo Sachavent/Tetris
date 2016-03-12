@@ -10,7 +10,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import DeroulementJeu.Deroulement;
+import InteractionClavier.GestionClavier;
 
+
+// Est appelé dans la classe Déroulement pour l'initialisation du jeu
 public class Fenetre {
 	
 	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
@@ -21,6 +24,10 @@ public class Fenetre {
 		
 		//Création fenetre
 		JFrame fenetre = new JFrame();
+		
+		///////////////////////////////////////////// AJOUTE LINTERACTION CLAVIER //////////////////////
+		// On ajoute un Keylistener 
+		fenetre.addKeyListener(new GestionClavier());
 		
 		// On crée un nouveau Board
 		// Affiche le tableau pour les test

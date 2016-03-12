@@ -1,0 +1,5 @@
+package InteractionClavier;
+
+public class InputListener {
+
+}

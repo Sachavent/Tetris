@@ -2,6 +2,9 @@ package GestionFichier;
 
 import DeroulementJeu.Deroulement;
 
+// Cest la classe qui s'occupe des pieces
+// Elle est appelé dans la classe Déroulement
+
 public class Pieces {
 	// Constante correspondant au nombre de piece, utile pour générer un random
 	public final static int NOMBRE_PIECE=2;
@@ -22,8 +25,6 @@ public class Pieces {
 			return;
 		}
 	}
-	
-	
 	
 	
 	// Fonction qui change les valeurs du board afin de créer la piece 2

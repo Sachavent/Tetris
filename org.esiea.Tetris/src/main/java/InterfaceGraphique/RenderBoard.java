@@ -8,7 +8,8 @@ import DeroulementJeu.Deroulement;
 import GestionFichier.Pieces;
 
 // C'est la fonction qui s'occupe uniquement de l'affichage
-
+// La fonction est appelé dans la classe déroulement
+// Cette classe est appelé dès qu'on a besoin d'update l'affichage
 public class RenderBoard extends JComponent {
 	  private int pas_vertical;
 	  private int pas_horizontal;

@@ -1,0 +1,75 @@
+package GestionFichier;
+
+import DeroulementJeu.Deroulement;
+
+// Cest la classe qui s'occupe des pieces
+// Elle est appelé dans la classe Déroulement
+
+public class Pieces {
+	// Constante correspondant au nombre de piece, utile pour générer un random
+	public final static int NOMBRE_PIECE=2;
+	
+	// Création des pieces, codé sur des cases 4x4
+	// Chaque piece possède déjà les "valeurs" de sa rotation donc pas besoin de gérer les rotations de façon manuelle
+	int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+	int[][] Piece2 = { {0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0},{0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0} };
+	
+	// Fonction appelé dans la classe Deroulement afin de créer une nouvelle piece
+	public void create_piece(int numberpiece) {
+		switch (numberpiece) {
+		case 1:
+			setPiece1();
+			return;
+		case 2:
+			setPiece2();
+			return;
+		}
+	}
+	
+	
+	
+	
+	// Fonction qui change les valeurs du board afin de créer la piece 2
+	public void setPiece2() {
+		
+		int compteur=0;
+		
+		for (int i=0; i < 4; i++) {
+			for (int j=3; j < 7; j++) {
+				Deroulement.Board[i][j]=Piece2[0][compteur];
+				compteur++;
+				}
+		
+		}
+	}
+	
+	
+	// Fonction qui change les valeurs du board afin de créer la piece 1
+	public void setPiece1() {
+		
+		int compteur=0;
+		
+		for (int i=0; i < 4; i++) {
+			for (int j=3; j < 7; j++) {
+				Deroulement.Board[i][j]=Piece1[0][compteur];
+				compteur++;
+				}
+		
+	}
+		
+	}
+	
+	
+	// Get avec le numéro de la piece qu'on souhaite afficher
+	public int[][] get_piece (int numberpiece){
+		switch (numberpiece) {
+		case 1:
+			return Piece1;
+			
+		default: return Piece1;
+		}
+		
+	}
+
+	
+}
