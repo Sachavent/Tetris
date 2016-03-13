@@ -24,7 +24,25 @@ public class GestionClavier implements KeyListener{
 		// Quand on appuie sur la touche gauche
 		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
 			// On souhaite un déplacement de la piece vers la gauche
-			Pieces.position_piececourante[1]--;
+		  	int compteur=0;
+		  	int mincol=0;
+			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+					if (compteur < 16) {
+						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur%4<mincol) {
+							// Le min corresponds à l'indice de la colonne le plus à gauche de la piece courante
+							mincol=compteur%4;
+						}
+					}
+					compteur++;
+					
+					}
+			}
+			// On s'assure que la piece ne sort pas à droite du plateau
+			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
+			if (Pieces.position_piececourante[1]-mincol+1 > 0) {
+				Pieces.position_piececourante[1]--;
+			}
 			
 		}
 		
@@ -32,20 +50,22 @@ public class GestionClavier implements KeyListener{
 		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
 			// On souhaite un déplacement vers la droite
 		  	int compteur=0;
-		  	int max=0;
+		  	int maxcol=0;
 			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
-				for (int j=Pieces.position_piececourante[1]+1; j < Pieces.position_piececourante[1]+5; j++) {
+				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 					if (compteur < 16) {
-						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur%4>max) {
-							max=compteur%4;
+						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur%4>maxcol) {
+							// Le max corresponds à l'indice de la colonne le plus à droite de la piece courante
+							maxcol=compteur%4;
 						}
 					}
 					compteur++;
 					
 					}
 			}
-			
-			if (Pieces.position_piececourante[1]+max+1 < Fenetre.NUM_COL_TETRIS) {
+			// On s'assure que la piece ne sort pas à droite du plateau
+			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
+			if (Pieces.position_piececourante[1]+maxcol+1 < Fenetre.NUM_COL_TETRIS) {
 				Pieces.position_piececourante[1]++;
 			}
 		}

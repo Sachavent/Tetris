@@ -17,11 +17,27 @@ public class DescendrePieces {
 			e.printStackTrace();
 		} 
 		
-		System.out.println("Position ligne actuelle: "+Pieces.position_piececourante[0]);
+		
+	  	int compteur=0;
+	  	int maxligne=0;
+		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+				if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur/4>maxligne) {
+						// Le min corresponds à l'indice de la colonne le plus à gauche de la piece courante
+						maxligne=compteur/4;
+					}
+				}
+				compteur++;
+				
+				}
+		}
+
+		
 		// On regarde si  la piece sort du plateau quand elle avance
 		// Si oui, alors on l'intègre au board et on crée une nouvelle piece
-		if (Pieces.position_piececourante[0]+5 > Fenetre.NUM_LIGNE_TETRIS ) {
-		  	int compteur=0;		
+		if (Pieces.position_piececourante[0]+maxligne+2 > Fenetre.NUM_LIGNE_TETRIS ) {
+		  	compteur=0;		
 			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 					if (compteur < 16) {
@@ -35,11 +51,50 @@ public class DescendrePieces {
 			// Flag pour indiquer qu'il faut créer une nouvelle piece
 			create_new_piece=true;
 			// On incrémente la position s'il n'y a pas de problème...
-		} else {Pieces.position_piececourante[0]+=1;	 }
-
+		} else {
+			// Retour false, indique que la piece n'est pas bloqué
+			if (bloqueparboard(maxligne)==false) {
+				 Pieces.position_piececourante[0]+=1;
 				
+			} else {
+				// alors la piece est bloqué! Il faut donc créer une nouvelle piece!
+			  	compteur=0;		
+				for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+					for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+						if (compteur < 16) {
+						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+							Deroulement.Board[i][j]=Deroulement.piece_courante[Pieces.rotation_piececourante][compteur];
+						}
+						}
+						compteur++;
+						}
+				}
+				// Flag pour indiquer qu'il faut créer une nouvelle piece
+				create_new_piece=true;
+			}
+			
+		}
+
+		//(Deroulement.Board[Pieces.position_piececourante[0]+maxlign+1][Pieces.position_piececourante[1]+j] != 0)	
 				
 
 	}
+	}
+	
+	public static boolean bloqueparboard(int maxlign) {
+		int compteur=0;
+		for (int i=Pieces.position_piececourante[0]+1; i < Pieces.position_piececourante[0]+5; i++) {
+			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)+1][Pieces.position_piececourante[1]+(compteur%4)] > 0) {
+					return true; 
+				}
+				compteur++;
+			}
+		
+		}
+		
+		
+		
+		return false;
 	}
 }

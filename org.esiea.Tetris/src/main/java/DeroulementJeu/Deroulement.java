@@ -69,8 +69,18 @@ public class Deroulement {
 		//////////////////////////////////////////////////////////////
 		// Fonction qui sera réactualisé au cours du temps
 		public void run() {
+			
 			// Flag provenant de descendre piece
 			if (DescendrePieces.create_new_piece==true){
+				System.out.println("");
+				System.out.println("tableau reçut: ");
+				for (int i=0; i < Fenetre.NUM_LIGNE_TETRIS; i++ ) {
+					System.out.println("");
+					for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+						System.out.print(Board[i][j]);
+					}
+				}
+				
 				// On réinitialise la position pour la nouvelle piece
 				Pieces.position_piececourante[0]=0;
 				Pieces.position_piececourante[1]=3;

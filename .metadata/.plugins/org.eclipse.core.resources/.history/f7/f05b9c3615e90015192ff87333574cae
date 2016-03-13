@@ -1,0 +1,84 @@
+package DeroulementJeu;
+
+import GestionFichier.Pieces;
+import InterfaceGraphique.Fenetre;
+import Launcher.Launcher;
+
+public class DescendrePieces {
+	private static boolean flag_onemorezero=false;
+	public static boolean create_new_piece;
+	// Valeur qui indique de combien de ligne max on peut augmenter sans quitter le plateau
+	public static void launch() {
+		while (Launcher.finit==false) {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		
+	  	int compteur=0;
+	  	int maxligne=0;
+		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+				if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur/4>maxligne) {
+						// Le min corresponds à l'indice de la colonne le plus à gauche de la piece courante
+						maxligne=compteur/4;
+					}
+				}
+				compteur++;
+				
+				}
+		}
+
+		
+		// On regarde si  la piece sort du plateau quand elle avance
+		// Si oui, alors on l'intègre au board et on crée une nouvelle piece
+		if (Pieces.position_piececourante[0]+maxligne+2 > Fenetre.NUM_LIGNE_TETRIS ) {
+		  	compteur=0;		
+			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+					if (compteur < 16) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						Deroulement.Board[i][j]=Deroulement.piece_courante[Pieces.rotation_piececourante][compteur];
+					}
+					}
+					compteur++;
+					}
+			}
+			// Flag pour indiquer qu'il faut créer une nouvelle piece
+			create_new_piece=true;
+			// On incrémente la position s'il n'y a pas de problème...
+		} else {
+			if (bloqueparboard(maxligne)==false) {
+			Pieces.position_piececourante[0]+=1;	
+			}
+			
+		}
+
+		//if (Deroulement.Board[Pieces.position_piececourante[0]+maxlign+1][Pieces.position_piececourante[1]+j] != 0 && Deroulement.piece_courante[Pieces.rotation_piececourante][maxlign*4+j]>0);
+				
+
+	}
+	}
+	
+	public static boolean bloqueparboard(int maxlign) {
+		int compteur=0;
+		
+		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
+			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+				if (compteur < 16) {
+					if (Deroulement.Board[Pieces.position_piececourante[0]+compteur/4+1][Pieces.position_piececourante[1]+compteur%4] != 0 && Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						// Le min corresponds à l'indice de la colonne le plus à gauche de la piece courante
+						return true;
+					} 
+				}
+				compteur++;
+			}
+				}
+		
+		return false;
+	}
+}

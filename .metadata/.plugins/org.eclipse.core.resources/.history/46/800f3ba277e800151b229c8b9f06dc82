@@ -1,8 +1,0 @@
-package DeroulementJeu;
-
-public class DescendrePieces {
-
-	public static void descendrepiece() {
-		
-	}
-}
