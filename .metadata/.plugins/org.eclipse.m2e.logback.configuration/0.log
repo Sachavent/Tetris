@@ -5884,3 +5884,155 @@ Was expecting:
 2016-03-13 13:37:12,637 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
 2016-03-13 13:37:12,643 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-03-13 13:37:12,650 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:55:17,902 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:17,902 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:55:17,902 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:17,902 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:55:23,004 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:23,004 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:55:23,020 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:23,020 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:55:30,250 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:30,266 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:55:30,266 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:30,266 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:55:42,348 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:42,348 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:55:42,348 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:42,348 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:55:58,575 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:58,575 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:55:58,575 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:55:58,575 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:56:02,750 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:56:02,750 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:56:02,750 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:56:02,766 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:57:27,649 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:57:27,649 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:57:27,649 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:57:27,649 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:58:04,503 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:58:04,503 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:58:04,503 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:58:04,519 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 13:58:08,752 [Worker-74] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:58:08,752 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 13:58:08,752 [Worker-74] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 13:58:08,752 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:00:11,918 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:00:11,933 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:00:11,933 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:00:11,933 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:02:07,149 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:07,149 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:02:07,149 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:07,168 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:02:28,288 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:28,298 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:02:28,302 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:28,308 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:02:41,098 [Worker-78] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:41,102 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:02:41,104 [Worker-78] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:02:41,109 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:03:00,068 [Worker-79] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:00,074 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:03:00,079 [Worker-79] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:00,079 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:03:09,113 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:09,119 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:03:09,123 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:09,131 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:03:48,266 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:48,274 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:03:48,280 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:48,286 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:03:52,468 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:52,472 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:03:52,474 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:52,480 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:03:56,879 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:56,898 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:03:56,903 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:03:56,909 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:04:05,988 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:04:06,005 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:04:06,006 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:04:06,009 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:04:38,840 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:04:38,846 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:04:38,848 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:04:38,848 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:06:05,671 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:06:05,674 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:06:05,675 [Worker-76] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:06:05,679 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:06:58,903 [Worker-83] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:06:58,906 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:06:58,908 [Worker-83] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:06:58,909 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:07:16,639 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:16,639 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:07:16,639 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:16,639 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:07:26,135 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:26,140 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:07:26,143 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:26,147 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:07:36,376 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:36,381 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:07:36,384 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:36,392 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:07:46,194 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:46,201 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:07:46,205 [Worker-82] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:07:46,210 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:08:33,999 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:08:34,002 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:08:34,004 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:08:34,010 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:08:49,448 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:08:49,448 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:08:49,448 [Worker-80] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:08:49,448 [Worker-80] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:09:25,528 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:09:25,528 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:09:25,528 [Worker-72] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:09:25,528 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:09:59,118 [Worker-84] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:09:59,118 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:09:59,118 [Worker-84] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:09:59,139 [Worker-84] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:10:12,395 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:10:12,398 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:10:12,399 [Worker-81] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:10:12,399 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:10:25,708 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:10:25,708 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:10:25,708 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:10:25,727 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:11:44,044 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:11:44,048 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:11:44,049 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:11:44,054 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:13:32,125 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:13:32,128 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:13:32,130 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:13:32,132 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:16:56,263 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:16:56,268 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:16:56,270 [Worker-70] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:16:56,277 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:18:22,174 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:18:22,180 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:18:22,185 [Worker-87] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:18:22,192 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:18:53,671 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:18:53,677 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:18:53,681 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:18:53,692 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources
+2016-03-13 14:19:11,770 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:19:11,777 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\main\resources
+2016-03-13 14:19:11,783 [Worker-85] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-13 14:19:11,790 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Annick\Documents\GitHub\Tetris-Java\org.esiea.Tetris\src\test\resources

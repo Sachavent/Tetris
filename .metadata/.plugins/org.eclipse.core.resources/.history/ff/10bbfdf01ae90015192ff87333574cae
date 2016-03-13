@@ -53,7 +53,7 @@ public class DescendrePieces {
 			// On incrémente la position s'il n'y a pas de problème...
 		} else {
 			// Retour false, indique que la piece n'est pas bloqué
-			if (bloqueparboard()==false) {
+			if (bloqueparboard(maxligne)==false) {
 				 Pieces.position_piececourante[0]+=1;
 				
 			} else {

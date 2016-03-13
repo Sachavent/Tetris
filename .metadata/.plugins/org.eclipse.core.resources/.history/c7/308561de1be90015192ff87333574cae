@@ -18,11 +18,8 @@ public class GestionClavier implements KeyListener{
 		// Quand on appuie sur la touche du haut
 		if (e.getKeyCode()== KeyEvent.VK_UP) {
 			// On souhaite faire tourner les pieces
-		
+		System.out.println("Touche appuyée: HAUT");
 		}
-		
-		
-		/////////////////////////////////////////////// TOUCHE GAUCHE ///////////////////////////////////////
 		
 		// Quand on appuie sur la touche gauche
 		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
@@ -44,16 +41,10 @@ public class GestionClavier implements KeyListener{
 			// On s'assure que la piece ne sort pas à droite du plateau
 			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
 			if (Pieces.position_piececourante[1]-mincol+1 > 0) {
-				// Maintenant qu'on s'est assuré que la piece ne sort pas du tableau
-				// il faut vérifié qu'elle n'est pas bloquée
-				if (bloquegauche()==false) {
 				Pieces.position_piececourante[1]--;
-				}
 			}
 			
 		}
-		
-		//////////////////////////////////////////////////////// TOUCHE DROITE ////////////////////////////////
 		
 		//Quand on appuie sur la fleche droite
 		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
@@ -96,24 +87,9 @@ public class GestionClavier implements KeyListener{
 	
 	public static boolean bloquedroite() {
 		int compteur=0;
-		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
-			for (int j=Pieces.position_piececourante[1]+1; j < Pieces.position_piececourante[1]+5; j++) {
+		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+5; i++) {
+			for (int j=Pieces.position_piececourante[1]+1; j < Pieces.position_piececourante[1]+4; j++) {
 				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)][Pieces.position_piececourante[1]+(compteur%4)+1] > 0) {
-					return true; 
-				}
-				compteur++;
-			}
-		
-		}	
-		return false;
-	}
-	
-	public static boolean bloquegauche() {
-		int compteur=0;
-		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
-			for (int j=Pieces.position_piececourante[1]-1; j < Pieces.position_piececourante[1]+3; j++) {
-				
-				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)][Pieces.position_piececourante[1]-1+(compteur%4)] > 0) {
 					return true; 
 				}
 				compteur++;
