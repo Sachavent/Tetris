@@ -5,26 +5,36 @@ import InterfaceGraphique.Fenetre;
 import Launcher.Launcher;
 
 public class DescendrePieces {
+	
+	// Classe qui gère la descente des pieces
+	
 	private static boolean flag_onemorezero=false;
 	public static boolean create_new_piece;
 	// Valeur qui indique de combien de ligne max on peut augmenter sans quitter le plateau
 	public static void launch() {
 		while (Launcher.finit==false) {
 		try {
+			// Descend le plateau toute les seconde
+			// 1000 == 1 seconde
 			Thread.sleep(1000);
+			
+			// On appelle la fonction qui supprime les lignes en cas de besoin
+			suppressionLignePlateau();
+
+
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		
-		
+		// Permet de connaître l'indice de la piece la plus en bas.
 	  	int compteur=0;
 	  	int maxligne=0;
 		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 				if (compteur < 16) {
 					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur/4>maxligne) {
-						// Le min corresponds à l'indice de la colonne le plus à gauche de la piece courante
+						// Le min corresponds à l'indice de la colonne le plus en bas de la piece courante
 						maxligne=compteur/4;
 					}
 				}
@@ -49,6 +59,7 @@ public class DescendrePieces {
 					}
 			}
 			// Flag pour indiquer qu'il faut créer une nouvelle piece
+			// Créer une nouvelle piece correspond à "supprimer" la piece courante
 			create_new_piece=true;
 			// On incrémente la position s'il n'y a pas de problème...
 		} else {
@@ -58,6 +69,7 @@ public class DescendrePieces {
 				
 			} else {
 				// alors la piece est bloqué! Il faut donc créer une nouvelle piece!
+				// Il faut également intégrer la pièce courante au board.
 			  	compteur=0;		
 				for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 					for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
@@ -73,16 +85,15 @@ public class DescendrePieces {
 				create_new_piece=true;
 			}
 			
-		}
-
-		//(Deroulement.Board[Pieces.position_piececourante[0]+maxlign+1][Pieces.position_piececourante[1]+j] != 0)	
-				
+		}				
 
 	}
 	}
 	
+	// Fonction qui s'assure qu'on peut descendre la piece
 	public static boolean bloqueparboard() {
 		int compteur=0;
+		// Attention dans la boucle on suppose que la piece avance vers le bas ( +1 au numero de ligne)
 		for (int i=Pieces.position_piececourante[0]+1; i < Pieces.position_piececourante[0]+5; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)+1][Pieces.position_piececourante[1]+(compteur%4)] > 0) {
@@ -93,8 +104,33 @@ public class DescendrePieces {
 		
 		}
 		
-		
-		
 		return false;
 	}
+	
+	
+	// Fonction qui supprime ligne du tableau
+	public static void suppressionLignePlateau() {
+		// On initialise un compteur
+		// Si une case > 0 alors on incrémente le compteur
+		// Si le compteur == au nombre de colonne du Tetris alors la ligne est remplie (donc suppression -> remise des valeurs à 0)
+		
+		int compteur=0;
+		for (int ligne=0; ligne < Fenetre.NUM_LIGNE_TETRIS; ligne ++) {
+			if (compteur == Fenetre.NUM_COL_TETRIS){
+				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {
+					Deroulement.Board[ligne-1][colbis]=0;
+				}
+			} 
+			compteur=0;
+			for (int col=0; col < Fenetre.NUM_COL_TETRIS; col ++) {
+				if (Deroulement.Board[ligne][col]>0) {
+					compteur++;                                                     
+				}
+				
+			}
+		}
+	}
+	
+	
+	
 }

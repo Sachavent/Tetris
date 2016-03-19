@@ -1,8 +1,0 @@
-package org.esiea.Tetris;
-
-public class Toto {
-	public static int titi() {
-		
-	}
-}
-

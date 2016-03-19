@@ -61,6 +61,7 @@ public class RenderBoard extends JComponent {
 		  			// Si la case est pleine
 		  			if (plateau[i][j]>0) {
 		  				// Alors on "remplit" la case
+		  				
 		  				fill_case(g,i,j,width_rect, height_rect);
 		  			}
 		  			pas_horizontal+=width_rect;

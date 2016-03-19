@@ -19,4 +19,6 @@
 <fullyQualifiedTypeName name="GestionFichier.Pieces"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="InterfaceGraphique.Fenetre"/>
+<fullyQualifiedTypeName name="DeroulementJeu.DescendrePieces"/>
+<fullyQualifiedTypeName name="DeroulementJeu.BlocagePieces"/>
 </qualifiedTypeNameHistroy>
