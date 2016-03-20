@@ -16,8 +16,9 @@ public class Deroulement {
 	public static int[][] Board;
 	private Fenetre fenetre;
 	private Pieces piece_tetris;
-	private int choose_random_piece;
 	public static int[][] piece_courante;
+	//Corresponds au numéro de la piece courante (A CHANGER)
+	public static int numeropiece;
 	
 
 		// Fonction qui sert à initialiser le jeu
@@ -37,8 +38,8 @@ public class Deroulement {
 			piece_tetris= new Pieces();
 			
 			// On choisit un nombre aléatoire parmi les pieces existantes afin de choisir le numero de la piece a créer
-			int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
-			piece_courante = piece_tetris.create_piece(choose_random_piece);
+			numeropiece = randomInt(1 ,Pieces.NOMBRE_PIECE);
+			piece_courante = piece_tetris.create_piece(numeropiece);
 
 			
 			
@@ -75,8 +76,8 @@ public class Deroulement {
 				Pieces.rotation_piececourante=0;
 				
 				// On recrée une nouvelle piece
-				int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
-				piece_courante = piece_tetris.create_piece(choose_random_piece);
+				numeropiece = randomInt(1 ,Pieces.NOMBRE_PIECE);
+				piece_courante = piece_tetris.create_piece(numeropiece);
 				// On remet le flag à false
 				DescendrePieces.create_new_piece=false; 
 			}

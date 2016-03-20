@@ -34,7 +34,7 @@ public class Fenetre {
 	    fenetre.getContentPane().add(new RenderBoard());
 	    
 	    //Affiche la fenetre
-	    fenetre.setSize(400,500);
+	    fenetre.setSize(800,500);
 		fenetre.setVisible(true);
 	
 		

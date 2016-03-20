@@ -27,19 +27,15 @@ public class RenderBoard extends JComponent {
 		  	height_rect=20;
 		  	plateau= Deroulement.getBoard();
 		  	
-		  	//UTILE POUR LES TESTS
-		  	g.setColor(new Color(0,192,0)); 
-		  	fill_case(g,Pieces.position_piececourante[0],Pieces.position_piececourante[1]+3,width_rect, height_rect);
-		  	g.setColor(Color.pink);  
-		  	fill_case(g,Pieces.position_piececourante[0],Pieces.position_piececourante[1],width_rect, height_rect);
-		  	 g.setColor(new Color(0,128,224));
+
+		  	
 		 // Dessine piece courante
 		  	int compteur=0;		
 			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 					if (compteur < 16) {
 					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
-						fill_case(g,i,j,width_rect, height_rect);
+						fill_case(g,i,j,width_rect, height_rect,Deroulement.numeropiece);
 					}
 					}
 					compteur++;
@@ -62,7 +58,7 @@ public class RenderBoard extends JComponent {
 		  			if (plateau[i][j]>0) {
 		  				// Alors on "remplit" la case
 		  				
-		  				fill_case(g,i,j,width_rect, height_rect);
+		  				fill_case(g,i,j,width_rect, height_rect,plateau[i][j]);
 		  			}
 		  			pas_horizontal+=width_rect;
 		  		}
@@ -73,8 +69,49 @@ public class RenderBoard extends JComponent {
 		     
 	  }
 	  
-	  // Fonction permettant de dire qu'une case est occupée
-	  public void fill_case(Graphics g,int ligne, int col, int width_rect, int height_rect) {
-		  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+	  // Fonction dessinnat case 
+	  
+	  public void fill_case(Graphics g,int ligne, int col, int width_rect, int height_rect, int valeurforswitch) {
+		  
+		  switch (valeurforswitch) {
+		  case 1:
+			  g.setColor(Color.BLACK);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  case 2:
+			  g.setColor(Color.BLUE);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  case 3:
+			  g.setColor(Color.RED);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  case 4:
+			  g.setColor(Color.GREEN);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return; 
+		  case 5:
+			  g.setColor(Color.PINK);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  case 6:
+			  g.setColor(Color.CYAN);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  case 7:
+			  g.setColor(Color.DARK_GRAY);
+			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
+			  g.setColor(Color.BLACK);
+			  return;
+		  
+		  }
+		  
 	  }
+	  
 }
