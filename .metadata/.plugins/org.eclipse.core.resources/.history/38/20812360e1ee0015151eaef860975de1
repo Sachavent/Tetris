@@ -1,0 +1,58 @@
+package GestionFichier;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class EcritureFichier {
+	public static void main(String[] args) {	
+		final String chemin = "C:/Users/Annick/Documents/GitHub/Tetris-Java/org.esiea.Tetris/src/testFileWriter.txt";
+	    File file = new File(chemin);
+	    FileWriter fw;
+	    FileReader fr;
+			
+	    try {
+	      //Création de l'objet
+	    /*  fw = new FileWriter(file);
+	      String str = "Bonjour à tous, amis Zéros !\n";
+	      str += "\tComment allez-vous ? \n";
+	      //On écrit la chaîne
+	      fw.write(str);
+	      //On ferme le flux
+	      fw.close();*/
+				
+	      //Création de l'objet de lecture
+	      fr = new FileReader(file);
+	      BufferedReader br=new BufferedReader(fr);
+	      String ligne;
+	      int numLigne = 0; 
+	      int nombreDeLignes = 4; // par exemple 
+	      
+	      int[] var = new int[nombreDeLignes ]; 
+
+	      while ((ligne = br.readLine()) != null) 
+	      { 
+	      numLigne++; 
+	      System.out.println(ligne); 
+	      //chaine += ligne + "\n"; 
+	      int ind = ligne.indexOf(" "); 
+	      var[numLigne -1] = Integer.parseInt(ligne.substring(1, ind)); 
+	      } 
+
+	      for (int i = 0; i < var.length; i++) 
+	      { 
+	      System.out.println("var[" + i + "] = " + var[i]); 
+	      } 
+
+	      br.close();
+
+	    } catch (FileNotFoundException e) {
+	      e.printStackTrace();
+	    } catch (IOException e) {
+	      e.printStackTrace();
+	    }
+	  }
+}

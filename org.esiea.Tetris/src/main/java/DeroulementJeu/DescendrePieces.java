@@ -1,7 +1,6 @@
 package DeroulementJeu;
 
 import GestionFichier.Pieces;
-import GestionFichier.Score;
 import InterfaceGraphique.Fenetre;
 import Launcher.Launcher;
 
@@ -129,6 +128,7 @@ public class DescendrePieces {
 			// si compteur == nombre de colonne -> alors la ligne est remplie donc il faut la supprimer
 			// Il faut donc incrémenter le score
 			if (compteur == Fenetre.NUM_COL_TETRIS){
+				// ATTENTION ON INCREMENTE LE SCORE ICI
 				Score.augmenteScore();
 
 				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {					
