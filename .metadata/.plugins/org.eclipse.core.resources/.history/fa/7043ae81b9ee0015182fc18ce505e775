@@ -1,0 +1,9 @@
+package GestionFichier;
+
+public class Score {
+	private int score;
+	
+	public static void getScore() {
+		
+	}
+}

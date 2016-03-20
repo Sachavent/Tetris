@@ -130,7 +130,7 @@ public class DescendrePieces {
 			// Il faut donc incrémenter le score
 			if (compteur == Fenetre.NUM_COL_TETRIS){
 				Score.augmenteScore();
-
+				
 				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {					
 					// supprime la ligne
 					Deroulement.Board[ligne][colbis]=0;
