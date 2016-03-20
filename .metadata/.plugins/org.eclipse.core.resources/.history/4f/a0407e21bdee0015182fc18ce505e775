@@ -7,7 +7,7 @@ import DeroulementJeu.Deroulement;
 
 public class Pieces {
 	// Constante correspondant au nombre de piece, utile pour générer un random
-	public final static int NOMBRE_PIECE=7;
+	public final static int NOMBRE_PIECE=3;
 	// Position initial de la place
 	public static int[] position_piececourante= {0,3};
 	// Indique la rotation actuelle dans laquelle se trouve la piece
@@ -17,10 +17,6 @@ public class Pieces {
 	int[][] Piece1 = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
 	int[][] Piece2 = { {0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0},{0,2,0,0,0,2,0,0,0,2,0,0,0,2,0,0},{2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0} };
 	int[][] Piece3 = { {0,0,3,0,0,3,3,0,0,3,0,0,0,0,0,0},{0,0,0,0,0,3,3,0,0,0,3,3,0,0,0,0},{0,0,3,0,0,3,3,0,0,3,0,0,0,0,0,0},{0,0,0,0,0,3,3,0,0,0,3,3,0,0,0,0} };
-	int[][] Piece4 = { {0,4,4,0,0,4,4,0,0,0,0,0,0,0,0,0},{0,4,4,0,0,4,4,0,0,0,0,0,0,0,0,0},{0,4,4,0,0,4,4,0,0,0,0,0,0,0,0,0},{0,4,4,0,0,4,4,0,0,0,0,0,0,0,0,0} };
-	int[][] Piece5 = { {0,5,0,0,0,5,5,0,0,0,5,0,0,0,0,0},{0,0,0,0,0,0,5,5,0,5,5,0,0,0,0,0},{0,5,0,0,0,5,5,0,0,0,5,0,0,0,0,0},{0,0,0,0,0,0,5,5,0,5,5,0,0,0,0,0} };
-	int[][] Piece6 = { {0,0,6,0,0,0,6,0,0,6,6,0,0,0,0,0},{0,0,0,0,0,6,6,6,0,0,0,6,0,0,0,0},{0,6,6,0,0,6,0,0,0,6,0,0,0,0,0,0},{0,0,0,0,0,6,0,0,0,6,6,6,0,0,0,0} };
-	int[][] Piece7 = { {0,7,0,0,0,7,0,0,0,7,7,0,0,0,0,0},{0,0,0,0,0,0,0,7,0,7,7,7,0,0,0,0},{0,7,7,0,0,0,7,0,0,0,7,0,0,0,0,0},{0,0,0,0,0,7,7,7,0,7,0,0,0,0,0,0} };
 	
 	// Fonction appelé dans la classe Deroulement afin de créer une nouvelle piece
 	public int[][] create_piece(int numberpiece) {
@@ -32,14 +28,6 @@ public class Pieces {
 			return Piece2;
 		case 3:
 			return Piece3;
-		case 4:
-			return Piece4;
-		case 5:
-			return Piece5;
-		case 6:
-			return Piece6;
-		case 7:
-			return Piece7;
 		default: return null;
 		}
 	}
@@ -54,14 +42,6 @@ public class Pieces {
 			return Piece2;
 		case 3:
 			return Piece3;
-		case 4:
-			return Piece4;
-		case 5:
-			return Piece5;
-		case 6:
-			return Piece6;
-		case 7:
-			return Piece7;
 		default: return null;
 		}
 		

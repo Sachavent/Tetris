@@ -11,7 +11,7 @@ public class Score {
 	public static int getScore() {
 		return score;
 	}
-	public static void setScore(int newscore) {
-		score=newscore;
+	public static int getScore() {
+		return score;
 	}
 }

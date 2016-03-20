@@ -17,7 +17,7 @@ public class FenetreTest {
 		fenetre= new Fenetre();
 	}
 	
-	// Vérifie que la classe fenetre existe
+	// Vérifie que la classe existe
 	@Test
 	public void shouldReturnNotNull() {
 		Assert.assertNotNull(fenetre);

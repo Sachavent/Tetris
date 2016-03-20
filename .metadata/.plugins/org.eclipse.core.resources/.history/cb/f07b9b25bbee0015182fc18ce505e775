@@ -1,0 +1,25 @@
+package GestionFichierTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import GestionFichier.Score;
+
+public class ScoreTest {
+
+	@Before
+	public void initialisation() {
+		Score score= new Score();
+	}
+	
+	
+	@Test
+	public void shouldReturnScoreSupp0() {
+		Score.setScore(0);
+		Score.augmenteScore();
+		assertEquals(Piece1,pieces.get_piece(1));
+	}
+
+}

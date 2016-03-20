@@ -1,0 +1,22 @@
+package GestionFichierTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import GestionFichier.Score;
+
+public class ScoreTest {
+
+	@Before
+	public void initialisation() {
+		Score score= new Score();
+	}
+	
+	
+	@Test
+	public void shouldReturnScoreSupp0() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -26,8 +26,7 @@ public class InputTest {
 	
 	@Test
 	public void shouldReturnInputNotNull(){
-		robot.keyPress(KeyEvent.VK_UP);
-
+		robot.getKeyCode();
 		assertEquals(1,2);
 		
 		
