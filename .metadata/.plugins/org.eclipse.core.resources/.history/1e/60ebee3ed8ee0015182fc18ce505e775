@@ -75,44 +75,31 @@ public class RenderBoard extends JComponent {
 		  case 1:
 			  g.setColor(Color.BLACK);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
+				g.drawRect ((40+pas_horizontal), (30+pas_vertical), width_rect, height_rect);
 			  return;
 		  case 2:
 			  g.setColor(Color.BLUE);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return;
 		  case 3:
 			  g.setColor(Color.RED);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return;
 		  case 4:
 			  g.setColor(Color.GREEN);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return; 
 		  case 5:
 			  g.setColor(Color.PINK);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return;
 		  case 6:
 			  g.setColor(Color.CYAN);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return;
 		  case 7:
 			  g.setColor(Color.DARK_GRAY);
 			  g.fillRect(40+(width_rect*col), 30+(height_rect*ligne), width_rect, height_rect);
-			  g.setColor(Color.BLACK);
-			  g.drawRect ((40+width_rect*col), (30+height_rect*ligne), width_rect, height_rect);
 			  return;
 		  
 		  }
