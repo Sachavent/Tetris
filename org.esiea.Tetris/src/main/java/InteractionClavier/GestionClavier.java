@@ -22,17 +22,13 @@ public class GestionClavier implements KeyListener{
 		// Quand on appuie sur la touche du haut
 		if (e.getKeyCode()== KeyEvent.VK_UP) {
 			// On souhaite faire tourner les pieces
-			
-			if (BlocagePieces.rotationblocked() == false ) {
+			if (BlocagePieces.rotationblocked(Pieces.rotation_piececourante) == false ) {
 				// Alors la rotation n'est pas bloqué
-			if (Pieces.rotation_piececourante < 3) {
-				Pieces.rotation_piececourante++;
-			}
-				
 				// ATTENTION il faut gérer le cas où la rotation > 4 (il faut alors la remettre à 0)
-				if (Pieces.rotation_piececourante == 3 ) {
-					Pieces.rotation_piececourante=0;
-				}
+			if (Pieces.rotation_piececourante+1 > 3) {
+				Pieces.rotation_piececourante=0;
+			} else {Pieces.rotation_piececourante++; }
+				
 			}
 		}
 		

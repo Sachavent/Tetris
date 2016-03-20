@@ -16,7 +16,7 @@ public class DescendrePieces {
 		try {
 			// Descend le plateau toute les seconde
 			// 1000 == 1 seconde
-			Thread.sleep(1000);
+			Thread.sleep(200);
 			
 			// On appelle la fonction qui supprime les lignes en cas de besoin
 			suppressionLignePlateau();
@@ -114,23 +114,59 @@ public class DescendrePieces {
 		// Si une case > 0 alors on incrémente le compteur
 		// Si le compteur == au nombre de colonne du Tetris alors la ligne est remplie (donc suppression -> remise des valeurs à 0)
 		
+		
 		int compteur=0;
 		for (int ligne=0; ligne < Fenetre.NUM_LIGNE_TETRIS; ligne ++) {
-			if (compteur == Fenetre.NUM_COL_TETRIS){
-				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {
-					Deroulement.Board[ligne-1][colbis]=0;
-				}
-			} 
-			compteur=0;
 			for (int col=0; col < Fenetre.NUM_COL_TETRIS; col ++) {
 				if (Deroulement.Board[ligne][col]>0) {
+					// On incrémente le compteur quand la case n'est pas vide
 					compteur++;                                                     
 				}
 				
 			}
+			
+			// si compteur == nombre de colonne -> alors la ligne est remplie donc il faut la supprimer
+			if (compteur == Fenetre.NUM_COL_TETRIS){
+				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {					
+					// supprime la ligne
+					Deroulement.Board[ligne][colbis]=0;
+				}
+				// On descent le reste du plateau à partir de la ligne supprimé
+				descendreplateau(ligne);
+			} 
+			// ATTENTION: il ne faut pas oublier de remettre le compteur à 0
+			compteur=0;
 		}
 	}
 	
+	// Fonction permettant de descendre le plateau d'une ligne (quand il y a suppression d'une ligne)
+	public static void descendreplateau(int lignesuppress) {
+		
+		// On crée un tableau temporaire entre la ligne 0 et la ligne supprimée
+		int temp[][]= new int [lignesuppress+1][Fenetre.NUM_COL_TETRIS];
+		for (int i=0; i < lignesuppress+1; i++) {
+			for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+				if (i==0) {
+					temp[1][j]=Deroulement.Board[0][j];
+				}
+				if (i-1 > 0) {
+					//On décalle le board dans le tableau temp
+					temp[i][j]=Deroulement.Board[i-1][j];
+				}
+				
+			}
+		}
+
+		// Enfin, on enregistre les valeurs du tableau temp dans le Board 
+		// ATTENTION : quand on enregistre les valeurs, on va jusqu'à lignesupress+1 (et pas nombre de ligne)
+		for (int i=0; i < lignesuppress+1; i ++) {
+			for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+				Deroulement.Board[i][j]=temp[i][j];
+			}
+		}
+
+		
+	}
 	
 	
 }

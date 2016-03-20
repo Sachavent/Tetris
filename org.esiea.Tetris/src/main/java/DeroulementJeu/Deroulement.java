@@ -39,14 +39,7 @@ public class Deroulement {
 			// On choisit un nombre aléatoire parmi les pieces existantes afin de choisir le numero de la piece a créer
 			int choose_random_piece = randomInt(1 ,Pieces.NOMBRE_PIECE);
 			piece_courante = piece_tetris.create_piece(choose_random_piece);
-			/*for (int i=0; i < 20; i++) {
-				for (int j=0; j < 20; j++) {
-					
-					Deroulement.Board[i][j]=0;
-					
-					}
-			
-			}*/
+
 			
 			
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////

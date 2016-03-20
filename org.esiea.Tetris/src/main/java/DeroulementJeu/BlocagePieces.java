@@ -80,28 +80,32 @@ public class BlocagePieces {
 		return mincol;
 	}
 	
-	public static boolean rotationblocked() {
-
+	public static boolean rotationblocked(int rotation) {
+		if (rotation+1 > 3) {
+			rotation=0;
+		} else { rotation++;}
+			
 		int compteur=0; 
 		// On ne bouge pas la piece courante, on regarde juste si on peut la faire tourner
 		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 				// S'assure que la piece ne sort pas du board quand on fait une rotation
-				if (Deroulement.piece_courante[Pieces.rotation_piececourante+1][compteur]>0 
+				
+				if (Deroulement.piece_courante[rotation][compteur]>0 
 						&& Pieces.position_piececourante[1]+compteur%4+1 > Fenetre.NUM_COL_TETRIS) {
 				
 					return true;
 				}
 				
-				if (Deroulement.piece_courante[Pieces.rotation_piececourante+1][compteur]>0 
-						&& Pieces.position_piececourante[1]-compteur%4 < 0) {
+				if (Deroulement.piece_courante[rotation][compteur]>0 
+						&& Pieces.position_piececourante[1]+compteur%4 < 0) {
 
 							return true;
 				}
 				
 				
 				// Test contact en les pieces du board et la piece courante
-				if (Deroulement.piece_courante[Pieces.rotation_piececourante+1][compteur]>0 && 
+				if (Deroulement.piece_courante[rotation][compteur]>0 && 
 						Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)]
 								[Pieces.position_piececourante[1]+(compteur%4)] > 0) {
 					return true; 
