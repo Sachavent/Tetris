@@ -12,7 +12,7 @@ public class DescendrePieces {
 	public static boolean create_new_piece;
 	// Valeur qui indique de combien de ligne max on peut augmenter sans quitter le plateau
 	public static void launch() {
-		while (Launcher.finit==false) {
+		while (Perdu.isItLoose()==false) {
 		try {
 			// Descend le plateau toute les seconde
 			// 1000 == 1 seconde

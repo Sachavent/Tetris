@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Frame;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -36,8 +37,10 @@ public class Fenetre {
 	    //Affiche la fenetre
 	    fenetre.setSize(800,500);
 		fenetre.setVisible(true);
+	}
 	
-		
+	public void afficheFinPartie() {
+		JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
 	}
 	
 	

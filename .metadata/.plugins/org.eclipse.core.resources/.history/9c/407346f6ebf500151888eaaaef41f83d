@@ -1,0 +1,21 @@
+package DeroulementJeu;
+
+public class Perdu {
+
+	// Tant que c'est false c'est que l'utilisateur n'a pas perdu
+	private static boolean perdu=false;
+	
+	// Fonction qui indique si l'utilisateur a perdu ou non
+	public static boolean isItLoose() {
+		return perdu;
+	}
+	
+	// Fonction qui permet d'indiquer le résultat de la partie
+	public static void setLoose(boolean result) {
+		perdu=result;
+	}
+	
+	
+	
+	
+}

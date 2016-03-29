@@ -19,10 +19,13 @@ public class Deroulement {
 	public static int[][] piece_courante;
 	//Corresponds au numéro de la piece courante (A CHANGER)
 	public static int numeropiece;
-	
+	// Attribut qui indique si le joueur a perdu ou non
+	private Perdu defaite;
 
 		// Fonction qui sert à initialiser le jeu
 		public void initialise() {
+			
+			defaite=new Perdu();
 			
 			System.out.println("initialisation du jeu...");
 			// Crée le plateau de jeu
@@ -78,12 +81,25 @@ public class Deroulement {
 				// On recrée une nouvelle piece
 				numeropiece = randomInt(1 ,Pieces.NOMBRE_PIECE);
 				piece_courante = piece_tetris.create_piece(numeropiece);
+				
+				// Regarde si l'utilisateur a perdu apres avoir ajouté la piece.
+				// Si l'utilisateur a perdu alors on arrete le jeu!!!!!!!!!!!!!!!!!!!!!!!
+				Perdu.testDefaite();
+				if (Perdu.isItLoose()==true) {
+					fenetre.afficheFinPartie();
+				}
+
+				
 				// On remet le flag à false
 				DescendrePieces.create_new_piece=false; 
 			}
 		
-
 		}
+		
+		
+		
+		
+		
 		
 		// Fonction qui permet de retourner un nombre aléatoire entre 0 et Nombre de piece
 		public static int randomInt (int minimum, int maximum) {

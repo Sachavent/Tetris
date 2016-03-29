@@ -1,0 +1,9 @@
+package DeroulementJeu;
+
+public class Perdu {
+
+	Perdu() {
+		
+	}
+	
+}

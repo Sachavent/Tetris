@@ -1,0 +1,13 @@
+package DeroulementJeu;
+
+public class Perdu {
+
+	private boolean perdu=false;
+	
+	
+	
+	public void isItLoose() {
+		
+	}
+	
+}

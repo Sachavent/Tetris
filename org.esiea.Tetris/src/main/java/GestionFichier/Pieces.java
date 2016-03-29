@@ -44,7 +44,7 @@ public class Pieces {
 		}
 	}
 	
-	// A supprimer
+	// A supprimer/////////////
 	// Get avec le numéro de la piece qu'on souhaite afficher
 	public int[][] get_piece (int numberpiece){
 		switch (numberpiece) {

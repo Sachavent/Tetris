@@ -1,0 +1,11 @@
+package DeroulementJeu;
+
+public class Perdu {
+
+	boolean perdu=false;
+	
+	Perdu() {
+		
+	}
+	
+}

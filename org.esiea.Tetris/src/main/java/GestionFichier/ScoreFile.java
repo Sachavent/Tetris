@@ -29,8 +29,9 @@ public class ScoreFile {
 	        int nombreligne=0;
 	        int[] valeursrecuperees= new int [5];
 	        //Lecture des données
+	        // On lit les lignes une part une tant qu'il y en a encore
 	        while((entre = br.readLine()) != null) {
-	       
+	        	// NextInt permet de recupérer le prochain integer
 		        scorerecupere=scanner.nextInt();
 	        	System.out.println("score: "+ scorerecupere);
 		        valeursrecuperees[nombreligne]=scorerecupere;
