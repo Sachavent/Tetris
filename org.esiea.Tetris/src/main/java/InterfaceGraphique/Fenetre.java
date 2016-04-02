@@ -3,6 +3,7 @@ package InterfaceGraphique;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
+import java.util.Arrays;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -11,6 +12,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 import DeroulementJeu.Deroulement;
+import DeroulementJeu.Score;
 import InteractionClavier.GestionClavier;
 
 
@@ -20,11 +22,12 @@ public class Fenetre {
 	// DEFINIT NOMBRE LIGNE ET COLONNE DU TETRIS
 	public static int NUM_COL_TETRIS=10;
 	public static int NUM_LIGNE_TETRIS=20;
-	
+	private static JFrame fenetre;
+	private static int[] tableauscore;
 	public void creationfenetre() {
 		
 		//Création fenetre
-		JFrame fenetre = new JFrame();
+		fenetre = new JFrame();
 		
 		///////////////////////////////////////////// AJOUTE LINTERACTION CLAVIER //////////////////////
 		// On ajoute un Keylistener 
@@ -40,7 +43,9 @@ public class Fenetre {
 	}
 	
 	public void afficheFinPartie() {
-		JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+		tableauscore=Score.getTableauScore();
+		
+		JOptionPane.showMessageDialog(fenetre, "Game Over \nVotre score: "+ Score.getScore()+ "\nMeilleurs Scores:\n" +Arrays.toString(tableauscore));
 	}
 	
 	

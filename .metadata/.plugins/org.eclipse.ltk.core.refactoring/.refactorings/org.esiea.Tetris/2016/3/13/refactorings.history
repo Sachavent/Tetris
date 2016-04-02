@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;org.esiea.Tetris/src/testFileWriter.txt&apos; to &apos;Scores.txt&apos;" description="Rename resource &apos;testFileWriter.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/testFileWriter.txt" name="Scores.txt" stamp="1459288233500" updateReferences="true"/>
+</session>

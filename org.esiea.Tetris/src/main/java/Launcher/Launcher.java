@@ -44,8 +44,8 @@ public class Launcher {
 			};
 			
 			// On lance le thread du JOUEUR 1
-			/*Thread t_joueur1=new Thread(joueur1,"Joueur1");
-			t_joueur1.start();*/
+			Thread t_joueur1=new Thread(joueur1,"Joueur1");
+			t_joueur1.start();
 			
 ////////////////////CEST ICI QUON LANCE LE TETRIS DU JOUEUR 1 ///////////
 			

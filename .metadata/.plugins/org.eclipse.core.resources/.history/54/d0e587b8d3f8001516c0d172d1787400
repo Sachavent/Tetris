@@ -1,0 +1,29 @@
+package DeroulementJeu;
+
+import java.io.IOException;
+
+import GestionFichier.ScoreFile;
+
+// Score hérite de ScoreFile afin de pouvoir lire / écrire dans le fichier "Scores.txt"
+public class Score extends ScoreFile{
+	private static int score;
+	private static int[] tableauscore;
+	
+	public static void augmenteScore() {
+		// si le score == 10 -> envoie malus
+		score++;
+	}
+	// Fonction qui retourne le score actuel
+	public static int getScore() {
+		return score;
+	}
+	
+	public static void setScore(int newscore) {
+		score=newscore;
+	}
+	
+	public static void setScoreFinPartie() throws IOException {
+		lectureFichierScore();
+		
+	}
+}

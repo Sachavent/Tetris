@@ -9,71 +9,62 @@ import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class ScoreFile {
-	public static void main(String[] args) {	
-		final String chemin = "src/testFileWriter.txt";
-	    File file = new File(chemin);
-	    FileWriter fw;
-	    FileReader fr;
-			
-	    try {
 
-			
-	        //Lecture des scores
-	        fr = new FileReader(file);
-	        BufferedReader br = new BufferedReader(fr); 
-	        // On crée un scanner qui va récupérer les int
-	        Scanner scanner = new Scanner(file);
-	        int scorerecupere;
-	        String entre;
-	        int nombreligne=0;
-	        int[] valeursrecuperees= new int [5];
-	        //Lecture des données
-	        // On lit les lignes une part une tant qu'il y en a encore
-	        while((entre = br.readLine()) != null) {
-	        	// NextInt permet de recupérer le prochain integer
-		        scorerecupere=scanner.nextInt();
-	        	System.out.println("score: "+ scorerecupere);
-		        valeursrecuperees[nombreligne]=scorerecupere;
-		        System.out.println("tableau :"+valeursrecuperees[nombreligne]);
-		        nombreligne++;
-	        	
-	        
-	        }
-	        //Affichage
-	        System.out.println("Affichage du tableau final");
-	        for (int compteur = 0; compteur < 5; compteur++) {
-	        	System.out.print(" " +valeursrecuperees[compteur]);
-	        }
-	        br.close();
-	        fr.close();
-	        
-	        
-	        
+// Classe qui permet l'écriture et la lecture de fichier
+public class ScoreFile {
+	
+	static final String chemin = "src/Scores.txt";
+    static File file = new File(chemin);
+    
+    static FileWriter fw;
+    static FileReader fr;
+    // Indique le nombre de score présent dans le fichier
+    public final static int NOMBRE_SCORE_STOCKE = 5;
+    static int[] valeursrecuperees;
+	
+	public static int[] lectureFichierScore() throws IOException {
+        //Lecture des scores
+        fr = new FileReader(file);
+        BufferedReader br = new BufferedReader(fr); 
+        // On crée un scanner qui va récupérer les int
+        Scanner scanner = new Scanner(file);
+        int scorerecupere;
+        String entre;
+        int nombreligne=0;
+        int[] valeursrecuperees= new int [NOMBRE_SCORE_STOCKE ];
+        //Lecture des données
+        // On lit les lignes une part une tant qu'il y en a encore
+        while((entre = br.readLine()) != null) {
+        	// NextInt permet de recupérer le prochain integer
+	        scorerecupere=scanner.nextInt();
+	        // On stocke la valeur recupérée dans un tableau
+	        valeursrecuperees[nombreligne]=scorerecupere;
+	        nombreligne++;
+        	
+        
+        }
+        br.close();
+        fr.close();
+        
+        
+        // Retourne un talbeau contenaent l'ensemble des scores récupérés
+        return valeursrecuperees;
+	}
+	
+	public static void ecritureFichierScore(int score, int positionscore) throws IOException {
 		   // Ecriture dans le fichier
 	 	   fw = new FileWriter(file);
 	 	   String str="";
-	        for (int compteur = 0; compteur < 5; compteur++) {
+	 	   
+	 	   	
+	        for (int compteur = 0; compteur < positionscore ; compteur++) {
 		 	      //On écrit la chaîne
-		 	      fw.write(new Integer(valeursrecuperees[compteur]).toString());
+		 	      fw.write(new Integer(score).toString());
 		 	     fw.write("\n");
 	        }
 
 	 	      //On ferme le flux
 	 	      fw.close();
-	        
-	        
-	        
-	        
-
-	    } 
-	    catch (NoSuchElementException e)
-        {    e.printStackTrace();
-        }
-	    catch (FileNotFoundException e) {
-	      e.printStackTrace();
-	    } catch (IOException e) {
-	      e.printStackTrace();
-	    }
-	  }
+		
+	}
 }

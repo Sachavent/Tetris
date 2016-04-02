@@ -1,0 +1,80 @@
+package GestionFichier;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+public class ScoreFile {
+	static final String chemin = "src/testFileWriter.txt";
+    static File file = new File(chemin);
+    static FileWriter fw;
+    static FileReader fr;
+    // Indique le nombre de score présent dans le fichier
+    final static int NOMBRE_VARIABLE_RECUPERE = 5;
+	
+	public static void main(String[] args) {	
+
+	    try {
+
+	        //Affichage
+	        System.out.println("Affichage du tableau final");
+	        for (int compteur = 0; compteur < NOMBRE_VARIABLE_RECUPERE; compteur++) {
+	        	System.out.print(" " +valeursrecuperees[compteur]);
+	        }
+	        br.close();
+	        fr.close();
+	        
+	        
+	        /*
+		   // Ecriture dans le fichier
+	 	   fw = new FileWriter(file);
+	 	   String str="";
+	        for (int compteur = 0; compteur < 5; compteur++) {
+		 	      //On écrit la chaîne
+		 	      fw.write(new Integer(valeursrecuperees[compteur]).toString());
+		 	     fw.write("\n");
+	        }
+
+	 	      //On ferme le flux
+	 	      fw.close();*/
+	    } 
+	    catch (NoSuchElementException e)
+        {    e.printStackTrace();
+        }
+	    catch (FileNotFoundException e) {
+	      e.printStackTrace();
+	    } catch (IOException e) {
+	      e.printStackTrace();
+	    }
+	  }
+	
+	public static void lectureFichierScore() {
+		
+        //Lecture des scores
+        fr = new FileReader(file);
+        BufferedReader br = new BufferedReader(fr); 
+        // On crée un scanner qui va récupérer les int
+        Scanner scanner = new Scanner(file);
+        int scorerecupere;
+        String entre;
+        int nombreligne=0;
+        int[] valeursrecuperees= new int [NOMBRE_VARIABLE_RECUPERE];
+        //Lecture des données
+        // On lit les lignes une part une tant qu'il y en a encore
+        while((entre = br.readLine()) != null) {
+        	// NextInt permet de recupérer le prochain integer
+	        scorerecupere=scanner.nextInt();
+        	System.out.println("score: "+ scorerecupere);
+	        valeursrecuperees[nombreligne]=scorerecupere;
+	        System.out.println("tableau :"+valeursrecuperees[nombreligne]);
+	        nombreligne++;
+        	
+        
+        }
+	}
+}

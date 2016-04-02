@@ -120,5 +120,24 @@ public class BlocagePieces {
 		
 	}
 	
+	
+	// Fonction qui s'assure qu'on peut descendre la piece
+	public static boolean bloqueparboard() {
+		int compteur=0;
+		// Attention dans la boucle on suppose que la piece avance vers le bas ( +1 au numero de ligne)
+		for (int i=Pieces.position_piececourante[0]+1; i < Pieces.position_piececourante[0]+5; i++) {
+			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)+1][Pieces.position_piececourante[1]+(compteur%4)] > 0) {
+					return true; 
+				}
+				compteur++;
+			}
+		
+		}
+		
+		return false;
+	}
+	
+	
 
 }
