@@ -7,6 +7,9 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import DeroulementJeu.Perdu;
+import DeroulementJeu.Score;
+
 public class Joueur1 extends Joueur {
 	
 	
@@ -19,6 +22,7 @@ public static void launch() throws IOException, InterruptedException {
 		final Socket socketduserveur ;
 		final BufferedReader in;
 		final PrintWriter out;
+
 	
 		
 		// Creation du Serveur
@@ -46,7 +50,7 @@ public static void launch() throws IOException, InterruptedException {
 		        		// Tant que le jeu n'est pas terminé
 		        		System.out.print("thread recuperation serveur: ");
 		        			
-		        		while (socketserver.isClosed()==false) {
+		        		while (Perdu.isItLoose()==false) {
 
 		        			String retour= new String();
 		    		        try {
@@ -56,7 +60,7 @@ public static void launch() throws IOException, InterruptedException {
 									
 								// ATTENTION ICI ON ATTENDS MALUS
 								if (retour.equals("malus")) {
-						        	System.out.println("SERVEUR: etat socket: " + socketserver.isClosed() +" MALUS ENVOYE PAR J2!");
+						        	//System.out.println("SERVEUR: etat socket: " + socketserver.isClosed() +" MALUS ENVOYE PAR J2!");
 						        	
 						        
 								}
@@ -77,10 +81,15 @@ public static void launch() throws IOException, InterruptedException {
 		        Runnable serveurenvoiemalus = new Runnable () {
 		        	//  AJOUTER LA GESTION DES MALUS!!!!!!!!!!
 		        	public void run() {
-		        		System.out.println ("ENVOIE DU MALUS PAR LE SERVEUR");
+		        		boolean envoie=false;
+		        		while (Perdu.isItLoose()==false) {
+		        		
+		        		if (Score.getScore()==1 && envoie==false) {
+		        		System.out.println("joueur 1 envoie un malus");
 		        		 sendmessage("malus",socketduserveur, out);
-		        		 sendmessage("malus",socketduserveur, out);
-		     
+		        		envoie=true;
+		        		}
+		        		}
 		        		 
 		        	     
 		        	}
@@ -95,8 +104,11 @@ public static void launch() throws IOException, InterruptedException {
 		        
 		        // A SUPPRIMER QUAND ON A LA CONDITION DARRET
 		        // PERMET DE SIMULER UN ARRET POUR LES TESTS (SERT POUR LA RECEPTION)
-		     // RAJOUTER UNE CONNEXION DARRET
-		        Thread.sleep(10000);
+		     // RAJOUTER UNE CONDITION DARRET
+		        while (Perdu.isItLoose()==false) {
+		        	 //Thread.sleep(1000);
+		        }
+		       
 		        
 		        
 		}catch (IOException e) {

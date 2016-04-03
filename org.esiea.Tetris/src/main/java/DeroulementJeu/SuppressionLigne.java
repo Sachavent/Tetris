@@ -31,7 +31,6 @@ public class SuppressionLigne {
 				////////////////////////////////////////
 				// ATTENTION ON INCREMENTE LE SCORE ICI
 				Score.augmenteScore();
-				System.out.println("le score actuel est :" + Score.getScore());
 
 				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {					
 					// supprime la ligne

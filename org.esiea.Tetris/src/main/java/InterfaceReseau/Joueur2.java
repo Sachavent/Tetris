@@ -10,6 +10,9 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
+import DeroulementJeu.Perdu;
+import DeroulementJeu.Score;
+
 public class Joueur2 extends Joueur {
 	
 	static Socket socket=null;
@@ -41,14 +44,14 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 		     
 		        	  // ATTENTION LA CONDITION DARRET EST A CHANGE
 		        	  ///////////////////////////////////
-		        	     while (socket.isClosed() ==false) {
+		        	     while (Perdu.isItLoose()==false) {
 
 					        try {
 								retour=recievemessage(in);
 								if (retour!=null ) {
 									// ATTENTION RECUPERE LE MOT MALUS
 									if (retour.equals("malus")) {
-							        	System.out.println("CLIENT: etat socket: " + socket.isClosed() +" MALUS ENVOYE PAR J1!");
+							        	//System.out.println("CLIENT: etat socket: " + socket.isClosed() +" MALUS ENVOYE PAR J1!");
 							        	
 	
 									}
@@ -64,8 +67,11 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 		        
 		        Runnable clientenvoiemalus= new Runnable () {
 		        	public void run() {
-		        		sendmessage("malus",socket, out);
-		        		 sendmessage("malus",socket, out);
+		        		 while (Perdu.isItLoose()==false) {
+		        		if (Score.getScore()%1==0 && Score.getScore()!=0) {
+		        			sendmessage("malus",socket, out);
+			        		}
+		        		 }
 		        	}
 		        };
 		        
@@ -82,8 +88,11 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 			    // A SUPPRIMER QUAND ON A LA CONDITION DARRET
 		        // PERMET DE SIMULER UN ARRET POUR LES TESTS 
 			       /////
-			    // RAJOUTER UNE CONNEXION DARRET
-		        Thread.sleep(10000);
+			    // RAJOUTER UNE CONDITION DARRET
+			       while (Perdu.isItLoose()==false) {
+			    	  //Thread.sleep(1000);
+			       }
+		   
 		        
 		       
 		}catch (ConnectException e) {

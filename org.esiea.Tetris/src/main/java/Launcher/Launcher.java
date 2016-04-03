@@ -21,6 +21,7 @@ public class Launcher {
 		String queljoueur= new String();
 		queljoueur=sc.nextLine();
 		
+		
 
 				
 		if (queljoueur.equals("1")) {

@@ -30,6 +30,7 @@
 <fullyQualifiedTypeName name="DeroulementJeu.Perdu"/>
 <fullyQualifiedTypeName name="InterfaceGraphique.Fenetre"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="DeroulementJeu.Score"/>
 <fullyQualifiedTypeName name="GestionFichier.ScoreFile"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="DeroulementJeu.Score"/>
 </qualifiedTypeNameHistroy>

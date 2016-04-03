@@ -18,7 +18,7 @@ public class DescendrePieces {
 		try {
 			// Descend le plateau toute les seconde
 			// 1000 == 1 seconde
-			Thread.sleep(200);
+			Thread.sleep(500);
 			
 			// On appelle la fonction qui supprime les lignes en cas de besoin
 			SuppressionLigne.suppressionLignePlateau();
