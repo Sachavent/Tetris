@@ -18,12 +18,12 @@ public class Perdu {
 		perdu=result;
 	}
 	
-	public static void testDefaite() {
+	public static void testDefaite(int [][]Board, int[][] piececourante) {
 	  	int compteur=0;		
 		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 				if (compteur < 16) {
-				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[i][j] > 0) {
+				if (piececourante[Pieces.rotation_piececourante][compteur]>0 && Board[i][j] > 0) {
 					Perdu.setLoose(true);
 				}
 				}

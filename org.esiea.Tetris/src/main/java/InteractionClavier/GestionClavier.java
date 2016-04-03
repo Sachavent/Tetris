@@ -22,7 +22,7 @@ public class GestionClavier implements KeyListener{
 		// Quand on appuie sur la touche du haut
 		if (e.getKeyCode()== KeyEvent.VK_UP) {
 			// On souhaite faire tourner les pieces
-			if (BlocagePieces.rotationblocked(Pieces.rotation_piececourante) == false ) {
+			if (BlocagePieces.rotationblocked(Pieces.rotation_piececourante, Deroulement.getBoard(),Deroulement.getpiece_courante()) == false ) {
 				// Alors la rotation n'est pas bloqué
 				// ATTENTION il faut gérer le cas où la rotation > 4 (il faut alors la remettre à 0)
 			if (Pieces.rotation_piececourante+1 > 3) {
@@ -39,14 +39,14 @@ public class GestionClavier implements KeyListener{
 		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
 			// On souhaite un déplacement de la piece vers la gauche
 
-			minimumcol=BlocagePieces.indexmincol();
+			minimumcol=BlocagePieces.indexmincol(Deroulement.getpiece_courante());
 			
 			// On s'assure que la piece ne sort pas à droite du plateau
 			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
 			if (Pieces.position_piececourante[1]+minimumcol > 0) {
 				// Maintenant qu'on s'est assuré que la piece ne sort pas du tableau
 				// il faut vérifié qu'elle n'est pas bloquée
-				if (BlocagePieces.bloquegauche()==false) {
+				if (BlocagePieces.bloquegauche(Pieces.position_piececourante,Pieces.rotation_piececourante,Deroulement.getBoard(), Deroulement.getpiece_courante())==false) {
 				Pieces.position_piececourante[1]--;
 				}
 			}
@@ -60,7 +60,7 @@ public class GestionClavier implements KeyListener{
 			// On souhaite un déplacement vers la droite
 
 			// On récupère l'index de la colonne le plus à droite
-			maximumcol=BlocagePieces.indexmaxcol();
+			maximumcol=BlocagePieces.indexmaxcol(Deroulement.getpiece_courante());
 			// On s'assure que la piece ne sort pas à droite du plateau
 			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
 			
@@ -68,7 +68,7 @@ public class GestionClavier implements KeyListener{
 			if (Pieces.position_piececourante[1]+maximumcol+1 < Fenetre.NUM_COL_TETRIS) {
 				// Maintenant qu'on s'est assuré que la piece ne sort pas du tableau
 				// il faut vérifié qu'elle n'est pas bloquée
-				if (BlocagePieces.bloquedroite()==false) {
+				if (BlocagePieces.bloquedroite(Pieces.position_piececourante,Pieces.rotation_piececourante,Deroulement.getBoard(),Deroulement.getpiece_courante())==false) {
 				Pieces.position_piececourante[1]++;
 				}
 			}

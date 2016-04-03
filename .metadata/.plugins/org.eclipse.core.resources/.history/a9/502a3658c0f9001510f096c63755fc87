@@ -1,0 +1,88 @@
+package InteractionClavier;
+
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import DeroulementJeu.BlocagePieces;
+import DeroulementJeu.Deroulement;
+import GestionFichier.Pieces;
+import InterfaceGraphique.Fenetre;
+
+
+// Classe gérant tous les inputs claviers
+// Est appelé dans la classe Fenetre
+public class GestionClavier implements KeyListener{
+	
+	int maximumcol;
+	int minimumcol;
+
+	// S'execute quand on appuie sur une touche
+	public void keyPressed(KeyEvent e) {
+		////////////////////////////////////////////////////// TOUCHE HAUT ///////////////////////////////
+		// Quand on appuie sur la touche du haut
+		if (e.getKeyCode()== KeyEvent.VK_UP) {
+			// On souhaite faire tourner les pieces
+			if (BlocagePieces.rotationblocked(Pieces.rotation_piececourante) == false ) {
+				// Alors la rotation n'est pas bloqué
+				// ATTENTION il faut gérer le cas où la rotation > 4 (il faut alors la remettre à 0)
+			if (Pieces.rotation_piececourante+1 > 3) {
+				Pieces.rotation_piececourante=0;
+			} else {Pieces.rotation_piececourante++; }
+				
+			}
+		}
+		
+		
+		/////////////////////////////////////////////// TOUCHE GAUCHE ///////////////////////////////////////
+		
+		// Quand on appuie sur la touche gauche
+		if (e.getKeyCode()== KeyEvent.VK_LEFT) {
+			// On souhaite un déplacement de la piece vers la gauche
+
+			minimumcol=BlocagePieces.indexmincol();
+			
+			// On s'assure que la piece ne sort pas à droite du plateau
+			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
+			if (Pieces.position_piececourante[1]+minimumcol > 0) {
+				// Maintenant qu'on s'est assuré que la piece ne sort pas du tableau
+				// il faut vérifié qu'elle n'est pas bloquée
+				if (BlocagePieces.bloquegauche()==false) {
+				Pieces.position_piececourante[1]--;
+				}
+			}
+			
+		}
+		
+		//////////////////////////////////////////////////////// TOUCHE DROITE ////////////////////////////////
+		
+		//Quand on appuie sur la fleche droite
+		if (e.getKeyCode()== KeyEvent.VK_RIGHT) {
+			// On souhaite un déplacement vers la droite
+
+			// On récupère l'index de la colonne le plus à droite
+			maximumcol=BlocagePieces.indexmaxcol();
+			// On s'assure que la piece ne sort pas à droite du plateau
+			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
+			
+			// On fait +1 car on souhaite déplacer la pièce vers la droite... 
+			if (Pieces.position_piececourante[1]+maximumcol+1 < Fenetre.NUM_COL_TETRIS) {
+				// Maintenant qu'on s'est assuré que la piece ne sort pas du tableau
+				// il faut vérifié qu'elle n'est pas bloquée
+				if (BlocagePieces.bloquedroite(Pieces.position_piececourante,Pieces.rotation_piececourante,Deroulement.getBoard())==false) {
+				Pieces.position_piececourante[1]++;
+				}
+			}
+		}
+	}
+
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

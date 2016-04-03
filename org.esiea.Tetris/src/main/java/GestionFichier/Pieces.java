@@ -43,29 +43,23 @@ public class Pieces {
 		default: return null;
 		}
 	}
-	
-	// A supprimer/////////////
-	// Get avec le numéro de la piece qu'on souhaite afficher
-	public int[][] get_piece (int numberpiece){
-		switch (numberpiece) {
-		case 1:
-			return Piece1;
-		case 2:
-			return Piece2;
-		case 3:
-			return Piece3;
-		case 4:
-			return Piece4;
-		case 5:
-			return Piece5;
-		case 6:
-			return Piece6;
-		case 7:
-			return Piece7;
-		default: return null;
-		}
-		
-	}
 
+					// Getter & Setters
+	
+	public int[] getCurrentPosition() {
+		return position_piececourante;
+	}
+	
+	public void setCurrentPosition(int [] positionpieceactuelle) {
+		position_piececourante=positionpieceactuelle;
+	}
+	
+	public int getCurrentRotation() {
+		return rotation_piececourante;
+	}
+	
+	public void setCurrentRotation (int rotation) {
+		rotation_piececourante=rotation;
+	}
 	
 }
