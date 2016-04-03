@@ -61,7 +61,9 @@ public class DescendrePieces {
 			}
 			// Flag pour indiquer qu'il faut créer une nouvelle piece
 			// Créer une nouvelle piece correspond à "supprimer" la piece courante
+			synchronized (Deroulement.lock) {
 			create_new_piece=true;
+			}
 			// On incrémente la position s'il n'y a pas de problème...
 		} else {
 			// Retour false, indique que la piece n'est pas bloqué
@@ -83,7 +85,9 @@ public class DescendrePieces {
 						}
 				}
 				// Flag pour indiquer qu'il faut créer une nouvelle piece
+				synchronized (Deroulement.lock) {
 				create_new_piece=true;
+				}
 			}
 			
 		}				

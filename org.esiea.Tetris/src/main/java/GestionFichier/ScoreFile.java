@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -13,7 +14,8 @@ import java.util.Scanner;
 // Classe qui permet l'écriture et la lecture de fichier
 public class ScoreFile {
 	
-	static final String chemin = "src/Scores.txt";
+	static final String chemin ="src/main/Scores.txt";
+	
     static File file = new File(chemin);
     
     static FileWriter fw;

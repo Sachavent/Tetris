@@ -1,0 +1,12 @@
+package Launcher;
+
+import InterfaceGraphique.Fenetre;
+
+public class InitialisationJoueur {
+
+	public static void initialisationJoueur () {
+		
+	}
+	
+	
+}

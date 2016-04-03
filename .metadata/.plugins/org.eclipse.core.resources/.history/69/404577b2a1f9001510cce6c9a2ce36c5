@@ -1,0 +1,33 @@
+package Launcher;
+
+import InterfaceGraphique.Fenetre;
+
+public class InitialisationJoueur {
+
+	public static void initialisationJoueur (int numerojoueur) {
+
+		switch (numerojoueur) {
+		case 0:
+			
+			return;
+		case 1:
+			lancementJoueur1();
+			return;
+		case 2:
+			lancementJoueur2();
+			return;
+		default: return null;
+		}
+	}
+	
+	public static void lancementJoueur1() {
+		
+	}
+	
+	public static void lancementJoueur2() {
+		
+	}
+	
+	
+	
+}

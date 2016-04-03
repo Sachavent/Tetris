@@ -1,0 +1,12 @@
+package GestionFichier;
+
+import java.net.URL;
+
+public class LoadRessource {
+	  static LoadRessource lr= new LoadRessource();
+    public static String loadRessource()
+    {	
+    	//System.out.println("chemin : " +LoadRessource.class.getResource("/resources/textfile.txt").getPath(););
+        return LoadRessource.class.getResource("/resources/textfile.txt").getPath();
+    }
+}

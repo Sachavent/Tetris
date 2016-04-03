@@ -1,0 +1,11 @@
+package GestionFichier;
+
+import java.awt.Toolkit;
+
+public class LoadRessource {
+	  static LoadRessource rl = new LoadRessource();
+    public static String loadRessource()
+    {
+        return Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("images/"+imageName));
+    }
+}

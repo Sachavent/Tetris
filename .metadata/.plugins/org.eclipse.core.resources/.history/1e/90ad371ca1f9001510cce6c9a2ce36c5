@@ -1,0 +1,13 @@
+package Launcher;
+
+import InterfaceGraphique.Fenetre;
+
+public class InitialisationJoueur {
+
+	public static void initialisationJoueur () {
+		int test= Fenetre.getCurrentPlayer();
+		System.out.println("Le joueur actuel est "+ test);
+	}
+	
+	
+}

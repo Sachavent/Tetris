@@ -1,0 +1,8 @@
+package GestionFichier;
+
+public class LoadRessource {
+    public static String loadRessource(String imageName)
+    {
+        return Toolkit.getDefaultToolkit().getImage(rl.getClass().getResource("images/"+imageName));
+    }
+}

@@ -21,9 +21,10 @@ public class Deroulement {
 	public static int numeropiece;
 	// Attribut qui indique si le joueur a perdu ou non
 	private Perdu defaite;
+	public static final Object lock = new Object();
 
 		// Fonction qui sert à initialiser le jeu
-		public void initialise() {
+		public void initialise() throws InterruptedException {
 			
 			defaite=new Perdu();
 			
@@ -33,7 +34,8 @@ public class Deroulement {
 			
 			// Permet d'initialiser l'interface graphique
 			fenetre= new Fenetre();
-			fenetre.creationfenetre();		
+			fenetre.creationfenetreaccueuil();
+			//fenetre.creationfenetretetris();		
 			
 			
 			////////////////////////////////////////////// Lance le premier tour du jeu //////////////////////
@@ -47,6 +49,7 @@ public class Deroulement {
 			
 			
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////
+			// Commencer le Thread quand la partie commence vraiment
 			
 			// On crée un thread pour la descente des pieces car elle se fait en parallèle du jeu
 			final DescendrePieces descendre= new DescendrePieces();
@@ -56,8 +59,10 @@ public class Deroulement {
 				}
 			};
 			
+			//Attends que le joueur ait fait sa selection
+			while (Fenetre.getStart()==false ) {Thread.sleep(100); }
+			
 			// On lance le thread pour la descente des pieces
-			 
 			Thread t_descente = new Thread (descente);
 			 t_descente.start();
 		}  
@@ -69,6 +74,7 @@ public class Deroulement {
 			
 			// Flag provenant de descendre piece
 			// Indique qu'il faut créer une nouvelle piece
+			synchronized (lock) {
 			if (DescendrePieces.create_new_piece==true){
 				
 				// On réinitialise la position pour la nouvelle piece
@@ -100,6 +106,7 @@ public class Deroulement {
 				
 				// On remet le flag à false
 				DescendrePieces.create_new_piece=false; 
+			}
 			}
 		
 		}

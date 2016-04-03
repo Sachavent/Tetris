@@ -1,0 +1,10 @@
+package Launcher;
+
+public class InitialisationJoueur {
+
+	public static void initialisationJoueur () {
+		
+	}
+	
+	
+}

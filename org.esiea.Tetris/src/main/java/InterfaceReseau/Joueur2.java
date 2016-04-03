@@ -24,7 +24,10 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 		
 		try {
 			// Creation de la socket
-			socket = new Socket(InetAddress.getLocalHost(),2015);	
+			// Mettre l'adresse de l'autre machine
+			// ATTENTION IL FAUT REMPLACER LADRESSE IP
+			 
+			socket = new Socket("192.168.1.10",2015);	
 			// Demande à se connecter au serveur
 		        System.out.println("Demande de connexion");
 
@@ -61,6 +64,14 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 								e.printStackTrace();
 							}
 		        	     }
+		        	     if (Perdu.isItLoose()==true) {
+		        	    	 try {
+								socket.close();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+		        	     }
 		        	}
 				   
 		        };
@@ -68,10 +79,20 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 		        Runnable clientenvoiemalus= new Runnable () {
 		        	public void run() {
 		        		 while (Perdu.isItLoose()==false) {
-		        		if (Score.getScore()%1==0 && Score.getScore()!=0) {
-		        			sendmessage("malus",socket, out);
-			        		}
-		        		 }
+				        		if (Score.getMalus()==true) {
+					        		System.out.println("joueur 1 envoie un malus");
+					        		 sendmessage("malus",socket, out);
+					        		 Score.setMalus(false);
+					        		}
+					        		}
+					        	     if (Perdu.isItLoose()==true) {
+					        	    	 try {
+					        	    		 socket.close();
+										} catch (IOException e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										}
+					        	     }
 		        	}
 		        };
 		        
@@ -92,6 +113,14 @@ public static void launch() throws InterruptedException, UnknownHostException, I
 			       while (Perdu.isItLoose()==false) {
 			    	  //Thread.sleep(1000);
 			       }
+	        	     if (Perdu.isItLoose()==true) {
+	        	    	 try {
+							socket.close();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+	        	     }
 		   
 		        
 		       

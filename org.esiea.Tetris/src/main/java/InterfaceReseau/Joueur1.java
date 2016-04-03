@@ -71,6 +71,14 @@ public static void launch() throws IOException, InterruptedException {
 							}
 		        		;
 		        		}
+		        	     if (Perdu.isItLoose()==true) {
+		        	    	 try {
+		        	    		 socketduserveur.close();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+		        	     }
 		        	}
 		        };
 		        
@@ -81,15 +89,26 @@ public static void launch() throws IOException, InterruptedException {
 		        Runnable serveurenvoiemalus = new Runnable () {
 		        	//  AJOUTER LA GESTION DES MALUS!!!!!!!!!!
 		        	public void run() {
-		        		boolean envoie=false;
 		        		while (Perdu.isItLoose()==false) {
-		        		
-		        		if (Score.getScore()==1 && envoie==false) {
+		
+		        		if (Score.getMalus()==true) {
 		        		System.out.println("joueur 1 envoie un malus");
 		        		 sendmessage("malus",socketduserveur, out);
-		        		envoie=true;
+		        		 synchronized (Score.lock) {
+		        		 Score.setMalus(false);
+		        		 }
 		        		}
+		        		
+		        		
 		        		}
+		        	     if (Perdu.isItLoose()==true) {
+		        	    	 try {
+		        	    		 socketduserveur.close();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+		        	     }
 		        		 
 		        	     
 		        	}
@@ -109,7 +128,14 @@ public static void launch() throws IOException, InterruptedException {
 		        	 //Thread.sleep(1000);
 		        }
 		       
-		        
+       	     if (Perdu.isItLoose()==true) {
+    	    	 try {
+    	    		 socketduserveur.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+    	     }
 		        
 		}catch (IOException e) {
 			
