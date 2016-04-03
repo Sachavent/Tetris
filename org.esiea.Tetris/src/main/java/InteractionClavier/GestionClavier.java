@@ -60,7 +60,7 @@ public class GestionClavier implements KeyListener{
 			// On souhaite un déplacement vers la droite
 
 			// On récupère l'index de la colonne le plus à droite
-			maximumcol=BlocagePieces.indexmaxcol(Deroulement.getpiece_courante());
+			maximumcol=BlocagePieces.indexmaxcol(Pieces.position_piececourante,Pieces.rotation_piececourante,Deroulement.getpiece_courante());
 			// On s'assure que la piece ne sort pas à droite du plateau
 			// De plus on s'assure qu'il n'y a pas déjà une piece du plateau
 			

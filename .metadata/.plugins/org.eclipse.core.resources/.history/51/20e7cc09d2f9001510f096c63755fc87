@@ -1,0 +1,12 @@
+mport static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SuppressionLigneTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

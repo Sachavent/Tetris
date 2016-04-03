@@ -13,10 +13,10 @@ import InterfaceGraphique.RenderBoard;
 
 public class Deroulement {
 	
-	private static int[][] Board;
+	public static int[][] Board;
 	private Fenetre fenetre;
 	private Pieces piece_tetris;
-	private static int[][] piece_courante;
+	public static int[][] piece_courante;
 	//Corresponds au numéro de la piece courante (A CHANGER)
 	public static int numeropiece;
 	// Attribut qui indique si le joueur a perdu ou non
@@ -25,6 +25,7 @@ public class Deroulement {
 
 		// Fonction qui sert à initialiser le jeu
 		public void initialise() throws InterruptedException {
+			
 			
 			defaite=new Perdu();
 			
@@ -77,6 +78,8 @@ public class Deroulement {
 			if (DescendrePieces.create_new_piece==true){
 				
 				// On réinitialise la position pour la nouvelle piece
+				//int newposition[] = {0,3};
+				//Pieces.setCurrentPosition(newposition);
 				Pieces.position_piececourante[0]=0;
 				Pieces.position_piececourante[1]=3;
 				
@@ -90,7 +93,7 @@ public class Deroulement {
 				// Regarde si l'utilisateur a perdu apres avoir ajouté la piece.
 				// Si l'utilisateur a perdu alors on arrete le jeu!!!!!!!!!!!!!!!!!!!!!!!
 			
-				Perdu.testDefaite(Board, piece_courante);
+				Perdu.testDefaite(Board, piece_courante,Pieces.getCurrentPosition(), Pieces.getCurrentRotation());
 				if (Perdu.isItLoose()==true) {
 					// Ce qu'il se passe quand l'utilisateur a perdu
 					try {

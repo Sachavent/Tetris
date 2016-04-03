@@ -16,7 +16,6 @@ public class RenderBoard extends JComponent {
 	  private int pas_horizontal;
 	  private int width_rect;
 	  private int height_rect;
-	  public int[][] plateau;
 	  private int[][]piececourante;
 	  private int numpiece;
 
@@ -27,7 +26,6 @@ public class RenderBoard extends JComponent {
 		  	pas_horizontal=0;
 		  	width_rect=20;
 		  	height_rect=20;
-		  	plateau= Deroulement.getBoard();
 		  	
 
 		  	
@@ -56,11 +54,10 @@ public class RenderBoard extends JComponent {
 		  			//On se déplace sur les colonnes donc on on fait un pas de la largeur du rectangle
 		  			 g.setColor(Color.BLACK);
 		  			g.drawRect ((40+pas_horizontal), (30+pas_vertical), width_rect, height_rect);
-		  			
 		  			// Si la case est pleine
-		  			if (plateau[i][j]>0) {
+		  			if (Deroulement.Board[i][j]>0) {
 		  				// Alors on "remplit" la case
-		  				fill_case(g,i,j,width_rect, height_rect,plateau[i][j]);
+		  				fill_case(g,i,j,width_rect, height_rect,Deroulement.Board[i][j]);
 		  			}
 		  			pas_horizontal+=width_rect;
 		  		}

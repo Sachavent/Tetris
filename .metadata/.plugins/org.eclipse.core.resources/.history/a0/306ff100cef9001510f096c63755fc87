@@ -1,0 +1,37 @@
+package DeroulementJeuTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import DeroulementJeu.BlocagePieces;
+import DeroulementJeu.Deroulement;
+import GestionFichier.Pieces;
+
+public class BlocagePieceTest {
+	private int rotation;
+	private int[] position_courante;
+	private int[][]plateau;
+	private int[][] piece;
+	private int[][] Piece;
+	@Before
+	public void allocation(){
+		rotation=0;
+		position_courante=new int[2];
+		plateau=new int [20][20];
+		int[][] Piece = { {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+		
+		
+	}
+	
+	@Test
+	public void shouldreturntrueforBloquedroite() {
+		position_courante[0]=0;
+		position_courante[1]=19;
+		boolean retour;
+		retour=BlocagePieces.bloquedroite(position_courante,pieces.rotation_piececourante,plateau, piececree);
+		assertEquals(true,retour);
+	}
+
+}

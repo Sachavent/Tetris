@@ -1,0 +1,77 @@
+package DeroulementJeu;
+
+import InterfaceGraphique.Fenetre;
+
+// Composant qui gère la suppression d'une ligne
+
+public class SuppressionLigne {
+	
+	
+	// Fonction qui supprime ligne du tableau
+	public static void suppressionLignePlateau(int [][]Board) {
+		// On initialise un compteur
+		// Si une case > 0 alors on incrémente le compteur
+		// Si le compteur == au nombre de colonne du Tetris alors la ligne est remplie (donc suppression -> remise des valeurs à 0)
+		
+		
+		int compteur=0;
+		for (int ligne=0; ligne < Fenetre.NUM_LIGNE_TETRIS; ligne ++) {
+			for (int col=0; col < Fenetre.NUM_COL_TETRIS; col ++) {
+				if (Board[ligne][col]>0) {
+					// On incrémente le compteur quand la case n'est pas vide
+					compteur++;                                                     
+				}
+				
+			}
+			/////////////////////////////// LIGNE REMPLIE DONC ON INCREMENTE LE SCORE ///////////////////////
+			// si compteur == nombre de colonne -> alors la ligne est remplie donc il faut la supprimer
+			// Il faut donc incrémenter le score
+			if (compteur == Fenetre.NUM_COL_TETRIS){
+				
+				////////////////////////////////////////
+				// ATTENTION ON INCREMENTE LE SCORE ICI
+				Score.augmenteScore();
+				System.out.println("score actuel: " + Score.getScore());
+
+				for (int colbis=0; colbis < Fenetre.NUM_COL_TETRIS; colbis++) {					
+					// supprime la ligne
+					Board[ligne][colbis]=0;
+				} 
+				// On descent le reste du plateau à partir de la ligne supprimé
+				descendreplateau(ligne,Board);
+			} 
+			// ATTENTION: il ne faut pas oublier de remettre le compteur à 0
+			compteur=0;
+		}
+	}
+	
+	//////////////////////////////////////////////////
+	// Fonction permettant de descendre le plateau d'une ligne (quand il y a suppression d'une ligne)
+	public static int[][] descendreplateau(int lignesuppress, int[][] plateau) {
+		
+		// On crée un tableau temporaire entre la ligne 0 et la ligne supprimée
+		int temp[][]= new int [lignesuppress+1][Fenetre.NUM_COL_TETRIS];
+		for (int i=0; i < lignesuppress+1; i++) {
+			for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+				if (i==0) {
+					temp[1][j]=plateau[0][j];
+				}
+				if (i-1 > 0) {
+					//On décalle le board dans le tableau temp
+					temp[i][j]=plateau[i-1][j];
+				}
+				
+			}
+		}
+
+		// Enfin, on enregistre les valeurs du tableau temp dans le Board 
+		// ATTENTION : quand on enregistre les valeurs, on va jusqu'à lignesupress+1 (et pas nombre de ligne)
+		for (int i=0; i < lignesuppress+1; i ++) {
+			for (int j=0; j < Fenetre.NUM_COL_TETRIS; j++) {
+				plateau[i][j]=temp[i][j];
+			}
+		}
+
+		return plateau;
+	}
+}

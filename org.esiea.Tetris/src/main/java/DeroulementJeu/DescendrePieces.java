@@ -10,8 +10,7 @@ public class DescendrePieces {
 	
 	private static boolean flag_onemorezero=false;
 	public static boolean create_new_piece;
-	private static int [][]plateau=Deroulement.getBoard();
-	private static int [][]piececourante= Deroulement.getpiece_courante();
+	
 	
 	
 	// Valeur qui indique de combien de ligne max on peut augmenter sans quitter le plateau
@@ -23,7 +22,7 @@ public class DescendrePieces {
 			Thread.sleep(500);
 			
 			// On appelle la fonction qui supprime les lignes en cas de besoin
-			SuppressionLigne.suppressionLignePlateau(plateau);
+			SuppressionLigne.suppressionLignePlateau(Deroulement.Board);
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -36,7 +35,7 @@ public class DescendrePieces {
 		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 				if (compteur < 16) {
-					if (piececourante[Pieces.rotation_piececourante][compteur]>0 && compteur/4>maxligne) {
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && compteur/4>maxligne) {
 						// Le min corresponds à l'indice de la colonne le plus en bas de la piece courante
 						maxligne=compteur/4;
 					}
@@ -54,14 +53,13 @@ public class DescendrePieces {
 			for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 				for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 					if (compteur < 16) {
-					if (piececourante[Pieces.rotation_piececourante][compteur]>0) {
-						plateau[i][j]=piececourante[Pieces.rotation_piececourante][compteur];
+					if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+						Deroulement.Board[i][j]=Deroulement.piece_courante[Pieces.rotation_piececourante][compteur];
 					}
 					}
 					compteur++;
 					}
 			}
-			Deroulement.setBoard(plateau);
 			
 			// Flag pour indiquer qu'il faut créer une nouvelle piece
 			// Créer une nouvelle piece correspond à "supprimer" la piece courante
@@ -71,7 +69,7 @@ public class DescendrePieces {
 			// On incrémente la position s'il n'y a pas de problème...
 		} else {
 			// Retour false, indique que la piece n'est pas bloqué
-			if (BlocagePieces.bloqueparboard(Deroulement.getBoard(), piececourante)==false) {
+			if (BlocagePieces.bloqueparboard()==false) {
 				 Pieces.position_piececourante[0]+=1;
 				
 			} else {
@@ -81,14 +79,15 @@ public class DescendrePieces {
 				for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
 					for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
 						if (compteur < 16) {
-						if (piececourante[Pieces.rotation_piececourante][compteur]>0) {
-							plateau[i][j]=piececourante[Pieces.rotation_piececourante][compteur];
+						if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0) {
+							Deroulement.Board[i][j]=Deroulement.piece_courante[Pieces.rotation_piececourante][compteur];
+		
 						}
 						}
 						compteur++;
 						}
 				}
-				Deroulement.setBoard(plateau);
+				
 				// Flag pour indiquer qu'il faut créer une nouvelle piece
 				synchronized (Deroulement.lock) {
 				create_new_piece=true;

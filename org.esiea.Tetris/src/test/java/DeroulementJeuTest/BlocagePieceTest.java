@@ -6,24 +6,40 @@ import org.junit.Before;
 import org.junit.Test;
 
 import DeroulementJeu.BlocagePieces;
+import DeroulementJeu.Deroulement;
 import GestionFichier.Pieces;
 
 public class BlocagePieceTest {
-	private Pieces pieces;
-	@Before
-	public void allocation(){
-		pieces= new Pieces();
-		pieces.create_piece(2);
+	private int rotation;
+	private int[] position_courante= new int[2];
+	private int[][]plateau= new int [20][20];
+	private int[][] Piece={ {0,1,0,0,0,1,1,0,0,1,0,0,0,0,0,0},{0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0},{0,0,0,1,0,0,1,1,0,0,0,1,0,0,0,0},{0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0} };
+
+	
+	@Test
+	public void shouldreturnfalseforBloquedroite() {
+		position_courante[0]=0;
+		position_courante[1]=15;
+		boolean retour;
+		retour=BlocagePieces.bloquedroite(position_courante,rotation,plateau, Piece);
+		assertEquals(false,retour);
 	}
 	
 	@Test
-	public void shouldreturntrueforBloquedroite() {
-		pieces.position_piececourante[0]=0;
-		pieces.position_piececourante[1]=19;
-		pieces.rotation_piececourante=0;
+	public void shouldreturnfalseforBloquegauche() {
+		position_courante[0]=0;
+		position_courante[1]=10;
 		boolean retour;
-		//retour=BlocagePieces.bloquedroite(pieces.position_piececourante,pieces.rotation_piececourante);
-		//assertEquals(false,pieces.create_piece(2));
+		retour=BlocagePieces.bloquegauche(position_courante,rotation,plateau, Piece);
+		assertEquals(false,retour);
 	}
+	
+	@Test
+	public void shouldreturnfalseforRotationbloque() {
+		boolean retour;
+		retour=BlocagePieces.rotationblocked(rotation, plateau,Piece);
+		assertEquals(false,retour);
+	}
+	
 
 }

@@ -10,6 +10,7 @@ public class BlocagePieces {
 		int compteur=0;
 		for (int i=positionpiece[0]; i < positionpiece[0]+4; i++) {
 			for (int j=positionpiece[1]+1; j < positionpiece[1]+5; j++) {
+				
 				if (piececourante[rotation][compteur]>0 && plateau[positionpiece[0]+(compteur/4)][positionpiece[1]+(compteur%4)+1] > 0) {
 					return true; 
 				}
@@ -39,13 +40,13 @@ public class BlocagePieces {
 	
 	// Retourne l'index de la colonne la plus à droite de la piece
 	
-	public static int indexmaxcol(int[][]piececourante) {
+	public static int indexmaxcol(int [] positionpiece, int rotation,int[][]piececourante) {
 	  	int compteur=0;
 	  	int maxcol=0;
-		for (int i=Pieces.position_piececourante[0]; i < Pieces.position_piececourante[0]+4; i++) {
-			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
+		for (int i=positionpiece[0]; i <positionpiece[0]+4; i++) {
+			for (int j=positionpiece[1]; j <positionpiece[1]+4; j++) {
 				if (compteur < 16) {
-					if (piececourante[Pieces.rotation_piececourante][compteur]>0 && compteur%4>maxcol) {
+					if (piececourante[rotation][compteur]>0 && compteur%4>maxcol) {
 						// Le max corresponds à l'indice de la colonne le plus à droite de la piece courante
 						maxcol=compteur%4;
 					}
@@ -121,12 +122,12 @@ public class BlocagePieces {
 	
 	
 	// Fonction qui s'assure qu'on peut descendre la piece
-	public static boolean bloqueparboard(int [][]plateau,int[][]piececourante) {
+	public static boolean bloqueparboard() {
 		int compteur=0;
 		// Attention dans la boucle on suppose que la piece avance vers le bas ( +1 au numero de ligne)
 		for (int i=Pieces.position_piececourante[0]+1; i < Pieces.position_piececourante[0]+5; i++) {
 			for (int j=Pieces.position_piececourante[1]; j < Pieces.position_piececourante[1]+4; j++) {
-				if (piececourante[Pieces.rotation_piececourante][compteur]>0 && plateau[Pieces.position_piececourante[0]+(compteur/4)+1][Pieces.position_piececourante[1]+(compteur%4)] > 0) {
+				if (Deroulement.piece_courante[Pieces.rotation_piececourante][compteur]>0 && Deroulement.Board[Pieces.position_piececourante[0]+(compteur/4)+1][Pieces.position_piececourante[1]+(compteur%4)] > 0) {
 					return true; 
 				}
 				compteur++;

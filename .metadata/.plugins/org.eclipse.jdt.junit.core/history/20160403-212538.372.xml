@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PiecesTest" project="org.esiea.Tetris" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="GestionFichierTest.PiecesTest" time="0.0">
+    <testcase name="shouldReturnPiece1" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece2" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece3" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece4" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece5" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece6" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+    <testcase name="shouldReturnPiece7" classname="GestionFichierTest.PiecesTest" time="0.0"/>
+  </testsuite>
+</testrun>

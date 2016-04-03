@@ -1,0 +1,19 @@
+package DeroulementJeuTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SuppressionLigneTest {
+	
+	@Before
+	public void initialisation() {
+		
+	}
+		
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
